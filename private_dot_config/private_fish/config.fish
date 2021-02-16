@@ -7,6 +7,7 @@ abbr --add e 'code'
 abbr --add tm 'tmux -2 new-session -A -s main'
 abbr --add src 'source ~/.config/fish/config.fish'
 abbr --add ch 'chezmoi'
+abbr --add rd 'rm -r'
 
 # ENV vars
 set PATH $PATH /Users/kwigley/.local/bin

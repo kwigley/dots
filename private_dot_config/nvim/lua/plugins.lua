@@ -37,4 +37,5 @@ return require('packer').startup(function()
   use { 'christoomey/vim-tmux-navigator' }
   use { 'preservim/nerdcommenter' }
   use { 'jiangmiao/auto-pairs' }
+  use { 'Yggdroot/indentLine' }
 end)
