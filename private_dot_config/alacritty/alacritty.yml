@@ -1,9 +1,11 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
 window:
   padding:
     x: 4
     y: 4
+  dynamic_padding: true
   dimensions:
     columns: 160
     lines: 48
@@ -74,7 +76,7 @@ colors:
     white: "#aeb3bb"
 
 selection:
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 mouse_bindings:
-- { mouse: Middle, action: PasteSelection }
+  - { mouse: Middle, action: PasteSelection }

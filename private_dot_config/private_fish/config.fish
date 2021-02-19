@@ -20,14 +20,3 @@ set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
 end
-
-# Start tmux immediately
-function start_tmux
-    if type tmux > /dev/null
-        #if not inside a tmux session, and if no session is started, start a new session
-        if test -z "$TMUX" ; and test -z $TERMINAL_CONTEXT
-            tmux -2 new-session -A -s main
-        end
-    end
-end
-start_tmux
