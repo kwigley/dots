@@ -36,7 +36,7 @@ return require('packer').startup(function()
   use { 'kyazdani42/nvim-tree.lua' }
   use { 'christoomey/vim-tmux-navigator' }
   -- use { 'preservim/nerdcommenter' }
-  use { 'vim-commentary' }
+  use { 'tpope/vim-commentary' }
   use { 'jiangmiao/auto-pairs' }
   use { 'Yggdroot/indentLine' }
 end)

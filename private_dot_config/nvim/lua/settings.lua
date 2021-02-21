@@ -26,5 +26,6 @@ utils.opt('b', 'autoindent', true)
 utils.opt('b', 'cindent', true)
 utils.opt('w', 'wrap', true)
 utils.opt('o', 'incsearch', true)
+utils.opt('o', 'mouse', 'a')
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
