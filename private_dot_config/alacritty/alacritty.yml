@@ -12,16 +12,16 @@ window:
 
 font:
   normal:
-    family: MonoLisa
+    family: MonoLisa Nerd Font
     style: Regular
   bold:
-    family: MonoLisa
+    family: MonoLisa Nerd Font
     style: Bold
   italic:
-    family: MonoLisa
+    family: MonoLisa Nerd Font
     style: Regular Italic
   bold_italic:
-    family: MonoLisa
+    family: MonoLisa Nerd Font
     style: Bold Italic
   size: 14
 
