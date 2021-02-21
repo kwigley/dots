@@ -1,3 +1,4 @@
 {{ if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
 softwareupdate -i -a
 {{ end -}}
