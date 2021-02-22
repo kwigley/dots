@@ -11,7 +11,6 @@ brew "asdf"
 brew "sqlite"
 brew "autojump"
 brew "awscli"
-brew "awscli@1"
 brew "bat"
 brew "bzip2"
 brew "cmake"
@@ -39,12 +38,9 @@ brew "libzip"
 brew "luajit", args: ["HEAD"]
 brew "luarocks"
 brew "luv"
-brew "n"
 brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "postgresql"
-brew "pyenv"
-brew "pyenv-virtualenv"
 brew "ripgrep"
 brew "rustup-init"
 brew "sops"
@@ -55,15 +51,11 @@ brew "watchman"
 brew "wget"
 brew "yq"
 brew "zlib"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
 brew "derailed/k9s/k9s"
-cask "alacritty"
+cask "alacritty", args: { appdir: "/Applications" }
 cask "docker", args: { appdir: "/Applications" }
-cask "font-hack-nerd-font"
 cask "iterm2", args: { appdir: "/Applications" }
-cask "kitty"
-cask "postgres", args: { appdir: "/Applications" }
+cask "kitty", args: { appdir: "/Applications" }
 cask "postico", args: { appdir: "/Applications" }
 cask "postman", args: { appdir: "/Applications" }
 cask "spotify", args: { appdir: "/Applications" }
