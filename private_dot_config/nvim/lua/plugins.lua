@@ -26,7 +26,7 @@ return require('packer').startup(function()
   -- git
   use { 'tpope/vim-fugitive' }
   use { 'tpope/vim-rhubarb' }
-  --use { 'airblade/vim-gitgutter' }
+  use { 'airblade/vim-gitgutter' }
   use { 'vim-airline/vim-airline' }
 
   use { 'ntpeters/vim-better-whitespace' }
