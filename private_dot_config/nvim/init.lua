@@ -14,15 +14,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 vim.cmd [[packadd packer.nvim]]
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
-
 -- Install plugins
 require('plugins')
-
 -- Key mappings
 require('keymappings')
-
--- Setup Lua language server using submodule
-require('lsp')
-
 -- Another option is to groups configuration in one folder
 require('config')
+-- Setup Lua language server using submodule
+require('lsp')
