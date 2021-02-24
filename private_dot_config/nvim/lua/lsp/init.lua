@@ -24,9 +24,10 @@ local on_attach = function(client, bufnr)
     -- buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     --buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-    buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-    buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+    buf_set_keymap('n', 'g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+    buf_set_keymap('n', 'g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     --buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+    buf_set_keymap('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
@@ -48,6 +49,13 @@ local on_attach = function(client, bufnr)
             augroup END
         ]], false)
     end
+
+    vim.api.nvim_exec([[
+        augroup lsp_inlay_hints
+            autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+            \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
+        augroup END
+    ]], false)
 end
 
 -- rust lsp
@@ -76,9 +84,14 @@ end
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
 local sumneko_root_path = vim.fn.stdpath('cache')..'/nlua/sumneko_lua/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
+local root_dir = function(fname)
+  return lsp.utils.find_git_ancestor(fname) or
+    lsp.utils.path.dirname(fname)
+end
 lsp.sumneko_lua.setup {
   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
   on_attach = on_attach,
+  root_dir = root_dir,
   settings = {
     Lua = {
       diagnostics = {
@@ -127,11 +140,10 @@ lspfuzzy.setup {}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-    signs = {
-      severity_limit = "Error",
-    },
-    -- virtual_text = {
-    --   severity_limit = "Warning",
-    -- },
+    virtual_text = true,
+    signs = true,
+    update_in_insert = true,
   }
 )
+
+
