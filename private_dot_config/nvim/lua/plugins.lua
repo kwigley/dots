@@ -28,6 +28,7 @@ return require('packer').startup(function()
   use { 'tpope/vim-rhubarb' }
   use { 'airblade/vim-gitgutter' }
   use { 'vim-airline/vim-airline' }
+  use { 'ruanyl/vim-gh-line' }
 
   use { 'ntpeters/vim-better-whitespace' }
   use { 'plasticboy/vim-markdown' }
@@ -35,7 +36,7 @@ return require('packer').startup(function()
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua' }
   use { 'christoomey/vim-tmux-navigator' }
-  -- use { 'preservim/nerdcommenter' }
+  use { 'knubie/vim-kitty-navigator' }
   use { 'tpope/vim-commentary' }
   use { 'jiangmiao/auto-pairs' }
   use { 'Yggdroot/indentLine' }
