@@ -1,5 +1,6 @@
-local lsp = require'lspconfig'
-local lspfuzzy = require'lspfuzzy'
+local lsp = require 'lspconfig'
+local util = require 'lspconfig/util'
+local lspfuzzy = require 'lspfuzzy'
 
 -- Your custom attach function for nvim-lspconfig goes here.
 local on_attach = function(client, bufnr)
@@ -36,26 +37,6 @@ local on_attach = function(client, bufnr)
         buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
     end
 
-    -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
-        vim.api.nvim_exec([[
-            hi LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
-            hi LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
-            hi LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
-            augroup lsp_document_highlight
-                autocmd! * <buffer>
-                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-            augroup END
-        ]], false)
-    end
-
-    vim.api.nvim_exec([[
-        augroup lsp_inlay_hints
-            autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-            \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-        augroup END
-    ]], false)
 end
 
 -- rust lsp
@@ -81,12 +62,11 @@ elseif vim.fn.has('win32') == 1 then
 else
   print("Unsupported system for sumneko")
 end
--- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
+
 local sumneko_root_path = vim.fn.stdpath('cache')..'/nlua/sumneko_lua/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
 local root_dir = function(fname)
-  return lsp.utils.find_git_ancestor(fname) or
-    lsp.utils.path.dirname(fname)
+    return util.find_git_ancestor(fname) or util.path.dirname(fname)
 end
 lsp.sumneko_lua.setup {
   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },

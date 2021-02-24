@@ -3,7 +3,7 @@ local utils = require'utils'
 utils.opt('o', 'completeopt', 'menuone,noinsert,noselect')
 vim.cmd [[autocmd BufEnter * lua require'completion'.on_attach()]]
 vim.cmd [[set shortmess+=c]]
-vim.g.completion_confirm_key = ""
+vim.g.completion_confirm_key = "<cr>"
 vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
 vim.g.diagnostic_enable_virtual_text = 1
 
