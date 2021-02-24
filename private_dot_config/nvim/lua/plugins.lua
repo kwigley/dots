@@ -31,8 +31,7 @@ return require('packer').startup(function()
   use { 'ruanyl/vim-gh-line' }
 
   use { 'ntpeters/vim-better-whitespace' }
-  use { 'plasticboy/vim-markdown' }
-
+  -- use { 'plasticboy/vim-markdown' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua' }
   -- use { 'christoomey/vim-tmux-navigator' }
