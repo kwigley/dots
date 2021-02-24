@@ -1,6 +1,5 @@
 local utils = require('utils')
 
-utils.map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
-utils.map('i', 'jk', '<Esc>')           -- jk to escape
-utils.map('n', '<C-n>', ':bnext<CR>')
-utils.map('n', '<C-p>', ':bprev<CR>')
+utils.map('i', 'jk', '<Esc>')
+utils.map('n', '<C-n>', '<cmd>bnext<CR>')
+utils.map('n', '<C-p>', '<cmd>bprev<CR>')

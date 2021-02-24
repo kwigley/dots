@@ -35,7 +35,7 @@ return require('packer').startup(function()
 
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua' }
-  use { 'christoomey/vim-tmux-navigator' }
+  -- use { 'christoomey/vim-tmux-navigator' }
   use { 'knubie/vim-kitty-navigator' }
   use { 'tpope/vim-commentary' }
   use { 'jiangmiao/auto-pairs' }
