@@ -2,6 +2,7 @@
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx PYTHONBREAKPOINT ipdb.set_trace
+set -gx GPG_TTY (tty)
 
 # Abbreviations/Aliases
 abbr --add senv 'source env/bin/activate.fish'
