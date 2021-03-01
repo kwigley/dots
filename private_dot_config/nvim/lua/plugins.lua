@@ -40,4 +40,6 @@ return require('packer').startup(function()
   use { 'tpope/vim-commentary' }
   use { 'jiangmiao/auto-pairs' }
   use { 'Yggdroot/indentLine' }
+  use { 'mhinz/vim-startify' }
+  use { 'brooth/far.vim' }
 end)
