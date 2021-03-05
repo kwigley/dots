@@ -22,7 +22,7 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'nvim-treesitter/completion-treesitter' }
   use { 'rust-lang/rust.vim' }
-  -- use { 'tjdevries/nlua.nvim' }
+  -- use { 'glepnir/lspsaga.nvim' } -- https://github.com/elianiva/dotfiles/tree/master/nvim/.config/nvim
 
   -- git
   use { 'tpope/vim-fugitive' }
@@ -32,14 +32,14 @@ return require('packer').startup(function()
   use { 'ruanyl/vim-gh-line' }
 
   use { 'ntpeters/vim-better-whitespace' }
-  -- use { 'plasticboy/vim-markdown' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua' }
-  -- use { 'christoomey/vim-tmux-navigator' }
   use { 'knubie/vim-kitty-navigator' }
   use { 'tpope/vim-commentary' }
   use { 'jiangmiao/auto-pairs' }
   use { 'Yggdroot/indentLine' }
   use { 'mhinz/vim-startify' }
   use { 'brooth/far.vim' }
+  use { 'dominikduda/vim_current_word' }
+  use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install' }
 end)

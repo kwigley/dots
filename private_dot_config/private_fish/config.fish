@@ -10,7 +10,6 @@ abbr --add d 'deactivate'
 abbr --add vim 'nvim'
 abbr --add n 'nvim'
 abbr --add e $EDITOR
-abbr --add tm 'tmux -2 new-session -A -s main'
 abbr --add src 'source ~/.config/fish/config.fish'
 abbr --add ch 'chezmoi'
 abbr --add rd 'rm -r'
