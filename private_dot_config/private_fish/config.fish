@@ -3,8 +3,9 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx PYTHONBREAKPOINT ipdb.set_trace
 set -gx GPG_TTY (tty)
+set -gx ASDF_DATA_DIR ~/.asdf
 
-# Abbreviations/Aliases
+# Abbr/Aliases
 abbr --add senv 'source env/bin/activate.fish'
 abbr --add d 'deactivate'
 abbr --add vim 'nvim'
