@@ -30,9 +30,6 @@ local plug_map = {
     ["n|<Leader>cw"]     = map_cmd("<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"):with_noremap():with_silent(),
     ["n|<Leader>ce"]     = map_cr('Lspsaga show_line_diagnostics'):with_noremap():with_silent(),
     ["n|<Leader>ct"]     = map_args("Template"),
-    -- mhinz/vim-signify
-    ["n|[g"]             = map_cmd("<plug>(signify-next-hunk)"),
-    ["n|]g"]             = map_cmd("<plug>(signify-prev-hunk)"),
     -- Plugin nvim-tree
     ["n|<Leader>e"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     ["n|<Leader>F"]      = map_cr('NvimTreeFindFile'):with_noremap():with_silent(),
@@ -43,7 +40,6 @@ local plug_map = {
     -- Plugin Floaterm
     ["n|<A-d>"]          = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
     ["t|<A-d>"]          = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
-    ["n|<Leader>g"]      = map_cu("Lspsaga open_floaterm lazygit"):with_noremap():with_silent(),
     -- Far.vim
     ["n|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
     ["v|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
@@ -63,6 +59,10 @@ local plug_map = {
     ["n|<Leader>kk"]     = map_cu('Telescope keymaps'):with_noremap():with_silent(),
     ["n|<Leader>fd"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.config'):with_noremap():with_silent(),
     ["n|<Leader>fs"]     = map_cu('Telescope gosource'):with_noremap():with_silent(),
+    -- Packer
+    ["n|<leader>pu"]     = map_cr("PackerUpdate"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>pc"]     = map_cr("PackerCompile"):with_silent():with_noremap():with_nowait();
     -- prodoc
     ["n|gcc"]            = map_cu('ProComment'):with_noremap():with_silent(),
     ["x|gcc"]            = map_cr('ProComment'),
