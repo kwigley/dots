@@ -10,6 +10,7 @@
   branch = auto
   ui = true
 [core]
+  pager = delta
   excludesfile = ~/.gitignore
 [apply]
   whitespace = nowarn
@@ -50,3 +51,9 @@
   rebase = false
 [init]
   defaultBranch = main
+[delta]
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Nord
+[interactive]
+    diffFilter = delta --color-only
