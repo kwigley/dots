@@ -15,7 +15,6 @@ ui['vim-airline/vim-airline'] = {
 }
 
 ui['mhinz/vim-startify'] = {
-  cmd = {'SLoad','SDelete','SClose','SSave'}
   config = conf.startify
 }
 

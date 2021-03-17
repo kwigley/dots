@@ -30,6 +30,10 @@ local plug_map = {
     ["n|<Leader>cw"]     = map_cmd("<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"):with_noremap():with_silent(),
     ["n|<Leader>ce"]     = map_cr('Lspsaga show_line_diagnostics'):with_noremap():with_silent(),
     ["n|<Leader>ct"]     = map_args("Template"),
+    -- Plugin Asheq/close-buffers.vim
+    ["n|<Leader>ca"]     = map_cr('Bdelete all'):with_noremap():with_silent(),
+    ["n|<Leader>co"]     = map_cr('Bdelete other'):with_noremap():with_silent(),
+    ["n|<Leader>q"]      = map_cr('Bdelete this'):with_noremap():with_silent(),
     -- Plugin nvim-tree
     ["n|<Leader>e"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     ["n|<Leader>F"]      = map_cr('NvimTreeFindFile'):with_noremap():with_silent(),

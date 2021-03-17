@@ -20,7 +20,6 @@ local def_map = {
     ["n|<C-k>"]      = map_cmd('<C-w>k'):with_noremap(),
     ["n|<A-[>"]      = map_cr('vertical resize -5'):with_silent(),
     ["n|<A-]>"]      = map_cr('vertical resize +5'):with_silent(),
-    ["n|<C-q>"]      = map_cmd(':wq<CR>'),
     ["n|<Leader>ss"] = map_cu('SSave'):with_noremap(),
     ["n|<Leader>sl"] = map_cu('SLoad'):with_noremap(),
     ["n|<Leader>sd"] = map_cu('SDelete'):with_noremap(),

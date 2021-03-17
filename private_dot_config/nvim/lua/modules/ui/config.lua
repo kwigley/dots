@@ -1,6 +1,5 @@
 local config = {}
 
-
 function config.nvim_tree()
   vim.g.nvim_tree_follow = 1
   vim.g.nvim_tree_hide_dotfiles = 1
