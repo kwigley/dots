@@ -1,5 +1,6 @@
 local config = {}
 
+
 function config.nvim_tree()
   vim.g.nvim_tree_follow = 1
   vim.g.nvim_tree_hide_dotfiles = 1
@@ -53,6 +54,13 @@ function config._gitsigns()
        ['x ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>'
      },
   }
+end
+
+function config.startify()
+  vim.g.startify_change_to_vcs_root = 1
+  vim.g.startify_session_persistence = 1
+  vim.g.startify_session_delete_buffers = 1
+  vim.g.startify_session_dir = require('core.global').cache_dir..'session'
 end
 
 return config

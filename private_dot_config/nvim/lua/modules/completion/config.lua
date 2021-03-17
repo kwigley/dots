@@ -1,5 +1,9 @@
 local config = {}
 
+function config.lspkind_nvim()
+  require('lspkind').init()
+end
+
 function config.nvim_lsp()
   require('modules.completion.lspconfig')
 end

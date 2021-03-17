@@ -14,7 +14,10 @@ ui['vim-airline/vim-airline'] = {
   config = [[vim.cmd('let g:airline#extensions#tabline#enabled = 1')]]
 }
 
-ui['mhinz/vim-startify'] = {}
+ui['mhinz/vim-startify'] = {
+  cmd = {'SLoad','SDelete','SClose','SSave'}
+  config = conf.startify
+}
 
 ui['kyazdani42/nvim-tree.lua'] = {
   cmd = {'NvimTreeToggle','NvimTreeOpen'},

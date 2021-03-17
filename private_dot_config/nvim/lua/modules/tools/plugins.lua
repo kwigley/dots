@@ -40,4 +40,8 @@ tools['Osse/vim-cd'] = {
   cmd = {'Cd'}
 }
 
+tools['Asheq/close-buffers.vim'] = {
+  cmd = {'Bdelete'}
+}
+
 return tools

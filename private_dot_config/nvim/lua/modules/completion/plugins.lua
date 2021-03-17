@@ -42,4 +42,8 @@ completion['mattn/emmet-vim'] = {
   config = conf.emmet,
 }
 
+completion['onsails/lspkind-nvim'] = {
+  config = conf.lspkind_nvim
+}
+
 return completion
