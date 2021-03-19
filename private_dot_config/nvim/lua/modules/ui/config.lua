@@ -58,8 +58,8 @@ end
 function config.startify()
   vim.g.startify_change_to_vcs_root = 1
   vim.g.startify_session_persistence = 1
-  vim.g.startify_session_delete_buffers = 1
   vim.g.startify_session_dir = require('core.global').cache_dir..'session'
+  vim.g.startify_bookmarks = vim.tbl_values({ '~/.config/nvim', '~/workspace/notes.md' })
 end
 
 return config

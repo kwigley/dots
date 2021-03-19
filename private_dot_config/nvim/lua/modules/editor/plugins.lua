@@ -10,9 +10,7 @@ editor['rhysd/accelerated-jk'] = {
   opt = true
 }
 
-editor['knubie/vim-kitty-navigator'] = {
-  opt = false
-}
+editor['knubie/vim-kitty-navigator'] = {}
 
 editor['norcalli/nvim-colorizer.lua'] = {
   ft = { 'html','css','sass','vim','typescript','typescriptreact'},

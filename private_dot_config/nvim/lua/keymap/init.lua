@@ -48,21 +48,21 @@ local plug_map = {
     ["n|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
     ["v|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
     -- Plugin Telescope
-    ["n|<Leader>bb"]     = map_cu('Telescope buffers'):with_noremap():with_silent(),
-    ["n|<Leader>fa"]     = map_cu('Telescope current_buffer_fuzzy_find'):with_noremap():with_silent(),
-    ["n|<Leader>fb"]     = map_cu('Telescope file_browser'):with_noremap():with_silent(),
-    ["n|<Leader>ff"]     = map_cu('Telescope find_files'):with_noremap():with_silent(),
-    ["n|<Leader>fg"]     = map_cu('Telescope git_files'):with_noremap():with_silent(),
-    ["n|<Leader>fw"]     = map_cu('Telescope grep_string'):with_noremap():with_silent(),
-    ["n|<Leader>fh"]     = map_cu('Telescope find_history'):with_noremap():with_silent(),
-    ["n|<Leader>fl"]     = map_cu('Telescope loclist'):with_noremap():with_silent(),
-    ["n|<Leader>fc"]     = map_cu('Telescope git_commits'):with_noremap():with_silent(),
-    ["n|<Leader>ft"]     = map_cu('Telescope help_tags'):with_noremap():with_silent(),
-    ["n|<Leader>fr"]     = map_cu('Telescope lsp_references'):with_noremap():with_silent(),
-    ["n|<Leader>fl"]     = map_cu('Telescope live_grep'):with_noremap():with_silent(),
-    ["n|<Leader>kk"]     = map_cu('Telescope keymaps'):with_noremap():with_silent(),
-    ["n|<Leader>fd"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.config'):with_noremap():with_silent(),
-    ["n|<Leader>fs"]     = map_cu('Telescope gosource'):with_noremap():with_silent(),
+    ["n|<Leader>bb"]     = map_cu('Telescope buffers prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fa"]     = map_cu('Telescope current_buffer_fuzzy_find prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fb"]     = map_cu('Telescope file_browser prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>ff"]     = map_cu('Telescope find_files find_command=rg,--hidden,--files prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fg"]     = map_cu('Telescope git_files prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fw"]     = map_cu('Telescope grep_string prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fh"]     = map_cu('Telescope find_history prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fl"]     = map_cu('Telescope loclist prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fc"]     = map_cu('Telescope git_commits prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>ft"]     = map_cu('Telescope help_tags prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fr"]     = map_cu('Telescope lsp_references prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fl"]     = map_cu('Telescope live_grep prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>kk"]     = map_cu('Telescope keymaps prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fd"]     = map_cu('Telescope dotfiles path='..os.getenv("HOME")..'/.config prompt_prefix=🔍'):with_noremap():with_silent(),
+    ["n|<Leader>fs"]     = map_cu('Telescope git_status prompt_prefix=🔍'):with_noremap():with_silent(),
     -- Packer
     ["n|<leader>pu"]     = map_cr("PackerUpdate"):with_silent():with_noremap():with_nowait();
     ["n|<leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
