@@ -44,4 +44,9 @@ tools['Asheq/close-buffers.vim'] = {
   cmd = {'Bdelete'}
 }
 
+tools['tyru/open-browser-github.vim'] = {
+  cmd = {'OpenGithubFile','OpenGithubIssue','OpenGithubPullReq','OpenGithubProject'},
+  requires = {{'tyru/open-browser.vim'}}
+}
+
 return tools

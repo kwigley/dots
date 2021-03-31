@@ -67,6 +67,7 @@ local load_core =function()
   vim.cmd [[command! PackerClean lua require('core.pack').clean()]]
   -- avoid shift sticky shift
   vim.cmd [[command! Q :q]]
+  vim.cmd [[command! W :w]]
 end
 
 load_core()
