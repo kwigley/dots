@@ -49,3 +49,4 @@ local def_map = {
 }
 
 bind.nvim_load_mapping(def_map)
+

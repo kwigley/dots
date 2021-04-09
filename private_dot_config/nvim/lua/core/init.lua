@@ -49,25 +49,30 @@ local leader_map = function()
   vim.api.nvim_set_keymap('x',' ','',{noremap = true})
 end
 
+local user_cmds = function()
+  local cmd = vim.cmd
+  -- avoid shift sticky shift
+  cmd(':command! WQ wq')
+  cmd(':command! WQ wq')
+  cmd(':command! Wq wq')
+  cmd(':command! Wqa wqa')
+  cmd(':command! W w')
+  cmd(':command! Q q')
+end
+
 local load_core =function()
+  local pack = require('core.pack')
   createdir()
   disable_distribution_plugins()
   leader_map()
+  user_cmds()
 
-  require('core.pack').ensure_plugins()
+  pack.ensure_plugins()
   require('core.options')
   require('core.mapping')
   require('keymap')
   require('core.event')
-
-  vim.cmd [[command! PackerCompile lua require('core.pack').compile()]]
-  vim.cmd [[command! PackerInstall lua require('core.pack').install()]]
-  vim.cmd [[command! PackerUpdate lua require('core.pack').update()]]
-  vim.cmd [[command! PackerSync lua require('core.pack').sync()]]
-  vim.cmd [[command! PackerClean lua require('core.pack').clean()]]
-  -- avoid shift sticky shift
-  vim.cmd [[command! Q :q]]
-  vim.cmd [[command! W :w]]
+  pack.load_compile()
 end
 
 load_core()

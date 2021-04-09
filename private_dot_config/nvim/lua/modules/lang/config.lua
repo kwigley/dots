@@ -30,7 +30,7 @@ function config.nvim_treesitter()
     indent = {
       enable = true
     },
-    ensure_installed = 'all'
+    ensure_installed = 'maintained'
   }
 end
 
