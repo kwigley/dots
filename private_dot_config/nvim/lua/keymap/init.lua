@@ -29,6 +29,7 @@ local plug_map = {
     ["n|gt"]             = map_cmd("<cmd>lua vim.lsp.buf.type_definition()<CR>"):with_noremap():with_silent(),
     ["n|<Leader>cw"]     = map_cmd("<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"):with_noremap():with_silent(),
     ["n|<Leader>ce"]     = map_cr('Lspsaga show_line_diagnostics'):with_noremap():with_silent(),
+    ["n|<Leader>cl"]     = map_cmd('<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>'):with_noremap():with_silent(),
     ["n|<Leader>ct"]     = map_args("Template"),
     -- Plugin Asheq/close-buffers.vim
     ["n|<Leader>ca"]     = map_cr('Bdelete all'):with_noremap():with_silent(),

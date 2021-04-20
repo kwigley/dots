@@ -25,7 +25,7 @@ local def_map = {
     ["n|<Leader>sd"] = map_cu('SDelete'):with_noremap(),
     ["n|<Leader>sc"] = map_cu('SClose'):with_noremap(),
     ["n|<Leader>cc"] = map_cmd(':nohl<CR>'),
-  -- Insert
+    -- Insert
     ["i|<C-w>"]      = map_cmd('<C-[>diwa'):with_noremap(),
     ["i|<C-h>"]      = map_cmd('<BS>'):with_noremap(),
     ["i|<C-d>"]      = map_cmd('<Del>'):with_noremap(),
@@ -38,7 +38,7 @@ local def_map = {
     ["i|<C-s>"]      = map_cmd('<Esc>:w<CR>'),
     ["i|<C-q>"]      = map_cmd('<Esc>:wq<CR>'),
     ["i|<C-e>"]      = map_cmd([[pumvisible() ? "\<C-e>" : "\<End>"]]):with_noremap():with_expr(),
-  -- command line
+    -- command line
     ["c|<C-b>"]      = map_cmd('<Left>'):with_noremap(),
     ["c|<C-f>"]      = map_cmd('<Right>'):with_noremap(),
     ["c|<C-a>"]      = map_cmd('<Home>'):with_noremap(),

@@ -5,11 +5,6 @@ ui['arcticicestudio/nord-vim'] = {
   config = [[vim.cmd('colorscheme nord')]]
 }
 
-ui['nathanaelkane/vim-indent-guides'] = {
-  cmd = {'IndentGuidesEnable', 'IndentGuidesDisable', 'IndentGuidesToggle'},
-  event = 'BufRead',
-}
-
 ui['vim-airline/vim-airline'] = {
   config = [[vim.cmd('let g:airline#extensions#tabline#enabled = 1')]]
 }
