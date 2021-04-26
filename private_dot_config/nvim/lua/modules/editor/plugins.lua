@@ -46,4 +46,16 @@ editor['kana/vim-niceblock']  = {
   opt = true
 }
 
+editor['editorconfig/editorconfig-vim'] = {
+  ft = { 'go','typescript','javascript','vim','rust','zig','c','cpp' }
+}
+
+editor['Osse/vim-cd'] = {
+  cmd = {'Cd'}
+}
+
+editor['Asheq/close-buffers.vim'] = {
+  cmd = {'Bdelete'}
+}
+
 return editor

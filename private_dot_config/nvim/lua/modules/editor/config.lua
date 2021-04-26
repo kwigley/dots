@@ -36,8 +36,4 @@ function config.vim_cursorword()
   vim.api.nvim_command('augroup END')
 end
 
-function config.vim_smartchar()
-  vim.api.nvim_command("autocmd FileType go inoremap <buffer><expr> ; smartchr#loop(':=',';')")
-end
-
 return config

@@ -1,8 +1,12 @@
 local config = {}
 
 function config.nvim_tree()
+  require("nvim-tree.events").on_nvim_tree_ready(
+    function()
+      vim.cmd("NvimTreeRefresh")
+    end
+  )
   vim.g.nvim_tree_follow = 1
-  vim.g.nvim_tree_hide_dotfiles = 1
   vim.g.nvim_tree_indent_markers = 1
   vim.g.nvim_tree_bindings = {
     ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
@@ -22,7 +26,7 @@ function config.nvim_tree()
   }
 end
 
-function config._gitsigns()
+function config.nvim_gitsigns()
   if not packer_plugins['plenary.nvim'].loaded then
     vim.cmd [[packadd plenary.nvim]]
   end
@@ -55,12 +59,47 @@ function config._gitsigns()
   }
 end
 
-function config.startify()
-  vim.g.startify_change_to_vcs_root = 1
-  vim.g.startify_session_persistence = 1
-  vim.g.startify_files_number = 5
-  vim.g.startify_session_dir = require('core.global').cache_dir..'session'
-  vim.g.startify_bookmarks = vim.tbl_values({ '~/.config/nvim', '~/.config' })
+function config.nvim_bufferline()
+  require('bufferline').setup {
+    options = {
+      diagnostics = "nvim_lsp",
+      mappings = true,
+      max_name_length = 18,
+      max_prefix_length = 15,
+      tab_size = 18,
+      show_buffer_close_icons = false,
+      diagnostics_indicator = function(count, level, diagnostics_dict)
+        local icon = level:match("error") and " " or " "
+        return " " .. icon .. count
+      end
+    }
+  }
+end
+
+function config.nvim_lualine()
+  require('lualine').setup{
+    options = {
+      theme = 'tokyonight',
+      icons_enabled = true,
+    },
+    sections = {
+      lualine_a = { {'mode', upper = true} },
+      lualine_b = { {'branch', icon = ''} },
+      lualine_c = { {'diagnostics', sources = {'nvim_lsp'}}, {'filename', file_status = true} },
+      lualine_x = { 'filetype' },
+      lualine_y = { 'progress' },
+      lualine_z = { 'location'  },
+    },
+    inactive_sections = {
+      lualine_a = {  },
+      lualine_b = {  },
+      lualine_c = { 'filename' },
+      lualine_x = { 'location' },
+      lualine_y = {  },
+      lualine_z = {   }
+    },
+    extensions = { 'fzf' }
+  }
 end
 
 return config

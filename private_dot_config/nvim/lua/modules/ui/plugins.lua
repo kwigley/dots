@@ -1,16 +1,28 @@
 local ui = {}
 local conf = require('modules.ui.config')
 
-ui['arcticicestudio/nord-vim'] = {
-  config = [[vim.cmd('colorscheme nord')]]
+ui['folke/tokyonight.nvim'] = {
+  config = function()
+    vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+    vim.cmd [[colorscheme tokyonight]]
+  end
 }
 
-ui['vim-airline/vim-airline'] = {
-  config = [[vim.cmd('let g:airline#extensions#tabline#enabled = 1')]]
+ui['hoob3rt/lualine.nvim'] = {
+  config = conf.nvim_lualine,
+  requires = {'kyazdani42/nvim-web-devicons'}
 }
 
-ui['mhinz/vim-startify'] = {
-  config = conf.startify
+ui['akinsho/nvim-bufferline.lua'] = {
+  cmd = {
+    'BufferLinePick',
+    'BufferLineCycleNext',
+    'BufferLineCyclePrev',
+    'BufferLineSortByDirectory',
+    'BufferLineSortByExtension'
+  },
+  config = conf.nvim_bufferline,
+  requires = {'kyazdani42/nvim-web-devicons'}
 }
 
 ui['kyazdani42/nvim-tree.lua'] = {
@@ -21,7 +33,7 @@ ui['kyazdani42/nvim-tree.lua'] = {
 
 ui['lewis6991/gitsigns.nvim'] = {
   event = {'BufRead','BufNewFile'},
-  config = conf._gitsigns,
+  config = conf.nvim_gitsigns,
   requires = {'nvim-lua/plenary.nvim',opt=true}
 }
 
