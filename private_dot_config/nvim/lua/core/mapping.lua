@@ -36,6 +36,8 @@ local def_map = {
     ["c|<C-d>"]      = map_cmd('<Del>'):with_noremap(),
     ["c|<C-h>"]      = map_cmd('<BS>'):with_noremap(),
     ["c|<C-t>"]      = map_cmd([[<C-R>=expand("%:p:h") . "/" <CR>]]):with_noremap(),
+    -- Terminal
+    ["t|<Esc>"]      = map_cmd('<C-\\><C-n>'):with_noremap(),
 }
 
 bind.nvim_load_mapping(def_map)

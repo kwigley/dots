@@ -39,6 +39,9 @@ function config.telescope()
     vim.cmd [[packadd telescope-fzy-native.nvim]]
   end
   require('telescope').setup {
+    builtin = {
+      treesitter = true
+    },
     defaults = {
       prompt_position = 'top',
       sorting_strategy = 'ascending',
@@ -48,7 +51,7 @@ function config.telescope()
     },
     extensions = {
         fzy_native = {
-            override_generic_sorter = false,
+            override_generic_sorter = true,
             override_file_sorter = true,
         }
     }

@@ -37,7 +37,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     update_in_insert = false,
 })
 
-local enhance_attach = function(client,bufnr)
+local enhance_attach = function(client, bufnr)
   if client.resolved_capabilities.document_formatting then
     format.lsp_before_save()
   end
@@ -45,7 +45,7 @@ local enhance_attach = function(client,bufnr)
 end
 
 lspconfig.gopls.setup {
-  cmd = {"gopls","--remote=auto"},
+  cmd = {"gopls", "--remote=auto"},
   on_attach = enhance_attach,
   capabilities = capabilities,
   init_options = {
@@ -55,6 +55,8 @@ lspconfig.gopls.setup {
 }
 
 lspconfig.sumneko_lua.setup {
+  on_attach = enhance_attach,
+  capabilities = capabilities,
   cmd = {
     global.cache_dir.."nlua/sumneko_lua/lua-language-server/bin/macOS/lua-language-server",
     "-E",
@@ -66,22 +68,31 @@ lspconfig.sumneko_lua.setup {
         enable = true,
         globals = {"vim","packer_plugins"}
       },
-      runtime = {version = "LuaJIT"},
+      runtime = {
+        version = "LuaJIT",
+        path = vim.split(package.path, ';')
+      },
       workspace = {
-        library = vim.list_extend({[vim.fn.expand("$VIMRUNTIME/lua")] = true},{}),
+        library = {
+          [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+          [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+        },
       },
     },
   }
 }
 
 lspconfig.tsserver.setup {
-  on_attach = function(client)
+  on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
-    enhance_attach(client)
-  end
+    enhance_attach(client, bufnr)
+  end,
+  capabilities = capabilities
 }
 
 lspconfig.clangd.setup {
+  on_attach = enhance_attach,
+  capabilities = capabilities,
   cmd = {
     "clangd",
     "--background-index",
@@ -92,11 +103,12 @@ lspconfig.clangd.setup {
 }
 
 local servers = {
-  'dockerls','yamlls','jsonls','rust_analyzer','pyright'
+  'dockerls','yamlls','jsonls','rust_analyzer','pyright','sqlls'
 }
 
 for _,server in ipairs(servers) do
   lspconfig[server].setup {
-    on_attach = enhance_attach
+    on_attach = enhance_attach,
+    capabilities = capabilities
   }
 end

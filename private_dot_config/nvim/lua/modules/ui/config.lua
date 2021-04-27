@@ -68,7 +68,7 @@ function config.nvim_bufferline()
       max_prefix_length = 15,
       tab_size = 18,
       show_buffer_close_icons = false,
-      diagnostics_indicator = function(count, level, diagnostics_dict)
+      diagnostics_indicator = function(count, level, _diagnostics_dict)
         local icon = level:match("error") and " " or " "
         return " " .. icon .. count
       end
@@ -84,21 +84,21 @@ function config.nvim_lualine()
     },
     sections = {
       lualine_a = { {'mode', upper = true} },
-      lualine_b = { {'branch', icon = ''} },
+      lualine_b = { {'branch', icon = ''}, 'diff' },
       lualine_c = { {'diagnostics', sources = {'nvim_lsp'}}, {'filename', file_status = true} },
-      lualine_x = { 'filetype' },
+      lualine_x = { 'lsp_progress', 'filetype' },
       lualine_y = { 'progress' },
-      lualine_z = { 'location'  },
+      lualine_z = { 'location' },
     },
     inactive_sections = {
-      lualine_a = {  },
-      lualine_b = {  },
+      lualine_a = {},
+      lualine_b = {},
       lualine_c = { 'filename' },
       lualine_x = { 'location' },
-      lualine_y = {  },
-      lualine_z = {   }
+      lualine_y = {},
+      lualine_z = {}
     },
-    extensions = { 'fzf' }
+    extensions = {'nvim-tree', 'fugitive'}
   }
 end
 
