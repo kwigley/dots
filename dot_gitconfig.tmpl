@@ -19,19 +19,7 @@
 [help]
   autocorrect = 1
 [push]
-  # See `git help config` (search for push.default)
-  # for more information on different options of the below setting.
-  #
-  # Setting to git 2.0 default to suppress warning message
   default = simple
-[merge]
-    tool = vscode
-[mergetool "vscode"]
-    cmd = code --wait $MERGED
-[diff]
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   required = true
@@ -50,9 +38,6 @@
 [init]
   defaultBranch = main
 [delta]
-  features = side-by-side line-numbers
-  plus-style = "syntax #012800"
-  minus-style = "syntax #340001"
-  syntax-theme = Nord
+  features = line-numbers
 [interactive]
     diffFilter = delta --color-only
