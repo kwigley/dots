@@ -86,7 +86,7 @@ function config.nvim_lualine()
     sections = {
       lualine_a = { {'mode', upper = true} },
       lualine_b = { {'branch', icon = ''}, 'diff' },
-      lualine_c = { {'diagnostics', sources = {'nvim_lsp'}}, {'filename', file_status = true} },
+      lualine_c = { {'diagnostics', sources = {'nvim_lsp'}}, {'filename', file_status = true, full_path = true} },
       lualine_x = { 'lsp_progress', 'filetype' },
       lualine_y = { 'progress' },
       lualine_z = { 'location' },

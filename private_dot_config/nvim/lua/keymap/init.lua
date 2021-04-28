@@ -60,6 +60,7 @@ local plug_map = {
     ["n|<Leader>fl"]     = map_cu('Telescope live_grep'):with_noremap():with_silent(),
     ["n|<Leader>kk"]     = map_cu('Telescope keymaps'):with_noremap():with_silent(),
     ["n|<Leader>fs"]     = map_cu('Telescope git_status'):with_noremap():with_silent(),
+    ["n|<Leader><Leader>"]     = map_cu('Telescope oldfiles'):with_noremap():with_silent(),
     -- Packer
     ["n|<Leader>pu"]     = map_cr("PackerUpdate"):with_silent():with_noremap():with_nowait();
     ["n|<Leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
