@@ -69,10 +69,4 @@ editor['godlygeek/tabular.git'] = {
   cmd = {'Tabularize'}
 }
 
-editor['folke/which-key.nvim'] = {
-  config = function()
-    require("which-key").setup {}
-  end
-}
-
 return editor
