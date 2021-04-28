@@ -14,8 +14,6 @@
   excludesfile = ~/.gitignore
 [apply]
   whitespace = nowarn
-[difftool]
-  prompt = false
 [help]
   autocorrect = 1
 [push]
@@ -40,4 +38,14 @@
 [delta]
   features = line-numbers
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
+[diff]
+  tool = vscode
+[difftool]
+  prompt = false
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
