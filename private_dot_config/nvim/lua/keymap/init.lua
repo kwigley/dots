@@ -53,7 +53,6 @@ local plug_map = {
     ["n|<Leader>ff"]     = map_cu('Telescope find_files'):with_noremap():with_silent(),
     ["n|<Leader>fg"]     = map_cu('Telescope git_files'):with_noremap():with_silent(),
     ["n|<Leader>fw"]     = map_cu('Telescope grep_string'):with_noremap():with_silent(),
-    -- ["n|<Leader><Leader>"]= map_cu('Telescope frecency'):with_noremap():with_silent(),
     ["n|<Leader>fc"]     = map_cu('Telescope git_commits'):with_noremap():with_silent(),
     ["n|<Leader>ft"]     = map_cu('Telescope help_tags'):with_noremap():with_silent(),
     ["n|<Leader>fr"]     = map_cu('Telescope lsp_references'):with_noremap():with_silent(),

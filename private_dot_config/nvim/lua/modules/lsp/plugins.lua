@@ -27,7 +27,6 @@ lsp['nvim-telescope/telescope.nvim'] = {
     {'nvim-lua/popup.nvim', opt = true},
     {'nvim-lua/plenary.nvim', opt = true},
     {'nvim-telescope/telescope-fzy-native.nvim', opt = true},
-    {'nvim-telescope/telescope-frecency.nvim', opt = true},
   }
 }
 
