@@ -37,6 +37,7 @@ function config.telescope()
     vim.cmd [[packadd plenary.nvim]]
     vim.cmd [[packadd popup.nvim]]
     vim.cmd [[packadd telescope-fzy-native.nvim]]
+    vim.cmd [[packadd telescope-frecency.nvim]]
   end
   require('telescope').setup {
     builtin = {
@@ -50,14 +51,23 @@ function config.telescope()
       qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
     },
     extensions = {
-        fzy_native = {
-            override_generic_sorter = true,
-            override_file_sorter = true,
-        }
+      fzy_native = {
+          override_generic_sorter = true,
+          override_file_sorter = true,
+      },
+      -- frecency = {
+      --   show_scores = false,
+      --   ignore_patterns = {"*.git/*", "*/tmp/*"},
+      --   workspaces = {
+      --     ["conf"]    = "~/.config",
+      --     ["data"]    = "~/.local/share",
+      --     ["workspace"] = "~/workspace",
+      --   }
+      -- }
     }
   }
   require('telescope').load_extension('fzy_native')
-  require('telescope').load_extension('dotfiles')
+  -- require('telescope').load_extension('frecency')
 end
 
 function config.vim_sonictemplate()

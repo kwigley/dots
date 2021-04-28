@@ -58,13 +58,15 @@ editor['Asheq/close-buffers.vim'] = {
   cmd = {'Bdelete'}
 }
 
-editor['tpope/vim-commentary'] = {
-  cmd = {'Commentary'}
-}
+editor['tpope/vim-commentary'] = {}
 
 editor['tpope/vim-fugitive'] = {
   cmd = {'Git', 'GBrowse'},
   requires = {'tpope/vim-rhubarb'}
+}
+
+editor['godlygeek/tabular.git'] = {
+  cmd = {'Tabularize'}
 }
 
 return editor

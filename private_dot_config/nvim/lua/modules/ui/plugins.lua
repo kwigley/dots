@@ -36,7 +36,7 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
   branch = 'lua',
   config = function()
     vim.g.indent_blankline_buftype_exclude = {'terminal'}
-    vim.g.indent_blankline_filetype_exclude = {'packer', 'txt', 'markdown'}
+    vim.g.indent_blankline_filetype_exclude = {'packer', 'txt', 'markdown', 'help'}
     vim.g.indent_blankline_show_first_indent_level = false
   end
 }
