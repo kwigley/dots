@@ -102,8 +102,12 @@ lspconfig.clangd.setup {
   },
 }
 
+lspconfig.sqlls.setup {
+  cmd = {'sql-language-server', 'up', '--method', 'stdio'},
+}
+
 local servers = {
-  'dockerls','yamlls','jsonls','rust_analyzer','pyright','sqlls'
+  'dockerls','yamlls','jsonls','rust_analyzer','pyright'
 }
 
 for _,server in ipairs(servers) do
