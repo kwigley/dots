@@ -88,6 +88,8 @@ local plug_map = {
     ["n|<Leader>cd"]     = map_cr("Cd"):with_noremap():with_silent(),
     -- Plugin folke/lsp-trouble.nvim
     ["n|<Leader>xx"]     = map_cr("LspTroubleToggle"):with_noremap():with_silent(),
+    -- Plugin tpope/fugitive
+    ["n|<Leader>gb"]     = map_cr("GBrowse"):with_noremap():with_silent(),
 };
 
 bind.nvim_load_mapping(plug_map)

@@ -37,6 +37,7 @@ function config.telescope()
     vim.cmd [[packadd plenary.nvim]]
     vim.cmd [[packadd popup.nvim]]
     vim.cmd [[packadd telescope-fzy-native.nvim]]
+    vim.cmd [[packadd lsp-trouble.nvim]]
   end
   require('telescope').setup {
     builtin = {
@@ -48,6 +49,10 @@ function config.telescope()
       file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
       grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
       qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+      mappings = {
+        i = { ["<c-t>"] = require('trouble.providers.telescope').open_with_trouble },
+        n = { ["<c-t>"] = require('trouble.providers.telescope').open_with_trouble },
+      },
     },
     extensions = {
       fzy_native = {
