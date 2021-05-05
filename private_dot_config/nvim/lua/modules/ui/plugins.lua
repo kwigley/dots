@@ -41,4 +41,6 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
   end
 }
 
+ui['npxbr/glow.nvim'] = {}
+
 return ui
