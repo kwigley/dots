@@ -58,9 +58,9 @@ lspconfig.sumneko_lua.setup {
   on_attach = enhance_attach,
   capabilities = capabilities,
   cmd = {
-    global.cache_dir.."nlua/sumneko_lua/lua-language-server/bin/macOS/lua-language-server",
+    global.cache_dir.."sumneko_lua/lua-language-server/bin/macOS/lua-language-server",
     "-E",
-    global.cache_dir.."nlua/sumneko_lua/lua-language-server/main.lua"
+    global.cache_dir.."sumneko_lua/lua-language-server/main.lua"
   };
   settings = {
     Lua = {
