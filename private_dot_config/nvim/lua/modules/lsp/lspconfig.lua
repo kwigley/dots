@@ -102,10 +102,6 @@ lspconfig.clangd.setup {
   },
 }
 
-lspconfig.sqlls.setup {
-  cmd = {'sql-language-server', 'up', '--method', 'stdio'},
-}
-
 local servers = {
   'dockerls','yamlls','jsonls','rust_analyzer','pyright'
 }

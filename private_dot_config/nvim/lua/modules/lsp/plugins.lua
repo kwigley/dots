@@ -52,4 +52,8 @@ lsp['folke/lsp-trouble.nvim'] = {
   config = conf.lsp_trouble
 }
 
+lsp['prettier/vim-prettier'] = {
+  ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'}
+}
+
 return lsp
