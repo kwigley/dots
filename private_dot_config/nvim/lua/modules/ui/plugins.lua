@@ -17,7 +17,6 @@ ui['hoob3rt/lualine.nvim'] = {
   config = conf.nvim_lualine,
   requires = {
     {'kyazdani42/nvim-web-devicons'},
-    {'arkav/lualine-lsp-progress'}
   }
 }
 
