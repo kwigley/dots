@@ -62,7 +62,10 @@ editor['tpope/vim-commentary'] = {}
 
 editor['tpope/vim-fugitive'] = {
   cmd = {'Git', 'GBrowse'},
-  requires = {'tpope/vim-rhubarb', 'tyru/open-browser.vim'}
+  requires = {
+    {'tpope/vim-rhubarb', opt=true},
+    {'tyru/open-browser.vim'}
+  }
 }
 
 editor['godlygeek/tabular.git'] = {
