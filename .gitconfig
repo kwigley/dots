@@ -1,7 +1,7 @@
 [user]
   name = Kyle Wigley
-  email = {{ .email }}
-  signingkey = {{ .gpg }}
+  email = kyle@fishtownanalytics.com
+  signingkey = 899609B8A4955F4A
 [credential]
   helper = osxkeychain
 [color]
