@@ -4,6 +4,9 @@ local conf = require('modules.lsp.config')
 lsp['neovim/nvim-lspconfig'] = {
   event = 'BufReadPre',
   config = conf.nvim_lsp,
+  requires = {
+    {'jose-elias-alvarez/nvim-lsp-ts-utils'}
+  }
 }
 
 lsp['glepnir/lspsaga.nvim'] = {
@@ -50,10 +53,6 @@ lsp['folke/lsp-trouble.nvim'] = {
   cmd = 'LspTroubleToggle',
   requires = {'kyazdani42/nvim-web-devicons'},
   config = conf.lsp_trouble
-}
-
-lsp['prettier/vim-prettier'] = {
-  ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'}
 }
 
 return lsp
