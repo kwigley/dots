@@ -90,7 +90,7 @@ lspconfig.tsserver.setup {
     ts_utils.setup {
       debug = false,
       disable_commands = false,
-      enable_import_on_completion = false,
+      enable_import_on_completion = true,
       import_on_completion_timeout = 5000,
 
       -- eslint
@@ -122,12 +122,6 @@ lspconfig.tsserver.setup {
 
     -- required to enable ESLint code actions and formatting
     ts_utils.setup_client(client)
-
-    -- no default maps, so you may want to define some here
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", {silent = true})
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "qq", ":TSLspFixCurrent<CR>", {silent = true})
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", {silent = true})
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", {silent = true})
   end,
   capabilities = capabilities,
   init_options = {usePlaceholders = true}
