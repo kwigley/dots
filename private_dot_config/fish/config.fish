@@ -29,6 +29,7 @@ if test -f /usr/local/opt/asdf/asdf.fish
 end
 
 # TokyoNight Color Palette
+# https://github.com/folke/tokyonight.nvim/blob/main/extras/fish_tokyonight_storm.fish
 set -l foreground c0caf5
 set -l selection 364A82
 set -l comment 565f89
