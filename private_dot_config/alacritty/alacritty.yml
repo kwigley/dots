@@ -26,6 +26,7 @@ font:
   size: 14
 
 # TokyoNight Alacritty Colors
+# https://github.com/folke/tokyonight.nvim/blob/main/extras/alacritty_tokyonight_storm.yml
 colors:
   # Default colors
   primary:
@@ -45,7 +46,7 @@ colors:
 
   # Bright colors
   bright:
-    black:   '0x1D202F'
+    black:   '0x414868'
     red:     '0xf7768e'
     green:   '0x9ece6a'
     yellow:  '0xe0af68'
