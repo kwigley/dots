@@ -64,12 +64,8 @@ editor['tpope/vim-fugitive'] = {
   cmd = {'Git', 'GBrowse'},
   requires = {
     {'tpope/vim-rhubarb', opt=true},
-    {'tyru/open-browser.vim'}
+    {'tyru/open-browser.vim', opt=false}
   }
-}
-
-editor['godlygeek/tabular.git'] = {
-  cmd = {'Tabularize'}
 }
 
 return editor

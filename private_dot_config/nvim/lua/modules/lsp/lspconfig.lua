@@ -94,7 +94,7 @@ lspconfig.tsserver.setup {
       import_on_completion_timeout = 5000,
 
       -- eslint
-      eslint_enable_code_actions = true,
+      eslint_enable_code_actions = false,
       eslint_bin = "eslint",
       eslint_args = {"-f", "json", "--stdin", "--stdin-filename", "$FILENAME"},
       eslint_enable_disable_comments = true,
