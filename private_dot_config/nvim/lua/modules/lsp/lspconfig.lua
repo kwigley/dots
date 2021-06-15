@@ -82,46 +82,40 @@ lspconfig.sumneko_lua.setup {
   }
 }
 
+-- required for "nvim-lsp-ts-utils"
+require("null-ls").setup {}
+
 lspconfig.tsserver.setup {
   on_attach = function(client, bufnr)
     local ts_utils = require("nvim-lsp-ts-utils")
 
     -- defaults
     ts_utils.setup {
-      debug = false,
-      disable_commands = false,
       enable_import_on_completion = true,
-      import_on_completion_timeout = 5000,
 
       -- eslint
-      eslint_enable_code_actions = false,
-      eslint_bin = "eslint",
-      eslint_args = {"-f", "json", "--stdin", "--stdin-filename", "$FILENAME"},
-      eslint_enable_disable_comments = true,
+      eslint_enable_code_actions = true,
 
       -- eslint diagnostics
-      eslint_enable_diagnostics = false,
-      eslint_diagnostics_debounce = 250,
+      eslint_enable_diagnostics = true,
 
       -- formatting
       enable_formatting = true,
-      formatter = "prettier",
-      formatter_args = {"--stdin-filepath", "$FILENAME"},
-      format_on_save = true,
-      no_save_after_format = false,
-
-      -- parentheses completion
-      complete_parens = false,
-      signature_help_in_parens = false,
 
       -- update imports on file move
-      update_imports_on_move = false,
-      require_confirmation_on_move = false,
       watch_dir = "/src",
     }
-
     -- required to enable ESLint code actions and formatting
     ts_utils.setup_client(client)
+
+    -- disable tsserver formatting
+    client.resolved_capabilities.document_formatting = false
+
+    -- define an alias
+    vim.cmd("command -buffer Formatting lua vim.lsp.buf.formatting()")
+
+    -- format on save
+    vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
   end,
   capabilities = capabilities,
   init_options = {usePlaceholders = true}

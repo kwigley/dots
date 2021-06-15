@@ -7,7 +7,6 @@ function config.nvim_tree()
     end
   )
   vim.g.nvim_tree_quit_on_open = 1
-  vim.g.nvim_tree_follow = 1
   vim.g.nvim_tree_indent_markers = 1
   vim.g.nvim_tree_auto_close = 1
   vim.g.nvim_tree_bindings = {
@@ -70,6 +69,7 @@ function config.nvim_bufferline()
       max_prefix_length = 15,
       tab_size = 18,
       show_buffer_close_icons = false,
+      offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left"}},
       diagnostics_indicator = function(count, level, _diagnostics_dict)
         local icon = level:match("error") and " " or " "
         return " " .. icon .. count

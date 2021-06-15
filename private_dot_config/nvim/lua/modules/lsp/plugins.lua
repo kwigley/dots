@@ -5,7 +5,8 @@ lsp['neovim/nvim-lspconfig'] = {
   event = 'BufReadPre',
   config = conf.nvim_lsp,
   requires = {
-    {'jose-elias-alvarez/nvim-lsp-ts-utils'}
+    {'jose-elias-alvarez/nvim-lsp-ts-utils'},
+    {'jose-elias-alvarez/null-ls.nvim'}
   }
 }
 

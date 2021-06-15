@@ -7,6 +7,14 @@ lang['nvim-treesitter/nvim-treesitter'] = {
   config = conf.nvim_treesitter,
 }
 
+lang['JoosepAlviste/nvim-ts-context-commentstring'] = {
+  after = 'nvim-treesitter'
+}
+
+lang['windwp/nvim-ts-autotag'] = {
+  after = 'nvim-treesitter'
+}
+
 lang['nvim-treesitter/nvim-treesitter-textobjects'] = {
   after = 'nvim-treesitter'
 }
