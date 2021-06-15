@@ -91,25 +91,13 @@ lspconfig.tsserver.setup {
 
     -- defaults
     ts_utils.setup {
-      enable_import_on_completion = true,
-
-      -- eslint
-      eslint_enable_code_actions = true,
-
-      -- formatting
       enable_formatting = true,
-
-      -- update imports on file move
-      watch_dir = "/src",
     }
     -- required to enable ESLint code actions and formatting
     ts_utils.setup_client(client)
 
     -- disable tsserver formatting
     client.resolved_capabilities.document_formatting = false
-
-    -- define an alias
-    vim.cmd("command -buffer Formatting lua vim.lsp.buf.formatting()")
 
     -- format on save
     vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
