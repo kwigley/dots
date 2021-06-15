@@ -96,9 +96,6 @@ lspconfig.tsserver.setup {
       -- eslint
       eslint_enable_code_actions = true,
 
-      -- eslint diagnostics
-      eslint_enable_diagnostics = true,
-
       -- formatting
       enable_formatting = true,
 
