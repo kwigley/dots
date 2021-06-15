@@ -19,4 +19,11 @@ lang['nvim-treesitter/nvim-treesitter-textobjects'] = {
   after = 'nvim-treesitter'
 }
 
+lang['steelsojka/headwind.nvim'] = {
+  after = 'nvim-treesitter',
+  config = function()
+    require("headwind").setup{}
+  end
+}
+
 return lang

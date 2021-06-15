@@ -92,6 +92,8 @@ lspconfig.tsserver.setup {
     -- defaults
     ts_utils.setup {
       enable_formatting = true,
+      eslint_enable_code_actions = false,
+      eslint_bin = "eslint_d"
     }
     -- required to enable ESLint code actions and formatting
     ts_utils.setup_client(client)
