@@ -32,7 +32,6 @@ ui['lewis6991/gitsigns.nvim'] = {
 }
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
-  branch = 'lua',
   config = function()
     vim.g.indent_blankline_buftype_exclude = {'terminal'}
     vim.g.indent_blankline_filetype_exclude = {'packer', 'txt', 'markdown', 'help'}
