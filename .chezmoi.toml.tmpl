@@ -1,6 +1,17 @@
-{{- $name := promptString "name" -}}
-{{- $email := promptString "email" -}}
-{{- $gpgKeyId := promptString "gpg key id (`gpg --list-secret-keys --keyid-format=long`)" -}}
+{{- $name := get . "name" -}}
+{{- if not $name -}}
+{{-   $name = promptString "name" -}}
+{{- end -}}
+
+{{- $email := get . "email" -}}
+{{- if not $email -}}
+{{-   $email = promptString "email" -}}
+{{- end -}}
+
+{{- $gpgKeyId := get . "gpgKeyId" -}}
+{{- if not $gpgKeyId -}}
+{{-   $gpgKeyId = promptString "gpg key id (`gpg --list-secret-keys --keyid-format=long`)" -}}
+{{- end -}}
 
 [data]
     name = "{{ $name }}"
