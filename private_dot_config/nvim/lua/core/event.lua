@@ -28,6 +28,7 @@ function autocmd.load_autocmds()
       {"BufWritePre","MERGE_MSG","setlocal noundofile"};
       {"BufWritePre","*.tmp","setlocal noundofile"};
       {"BufWritePre","*.bak","setlocal noundofile"};
+      {"BufWritePost","~/.local/share/chezmoi/*","! chezmoi apply --source-path %"};
     };
 
     wins = {
