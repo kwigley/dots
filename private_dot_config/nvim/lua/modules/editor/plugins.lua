@@ -74,6 +74,23 @@ editor['Lilja/vim-chezmoi'] = {
   end
 }
 
-editor['famiu/nvim-reload'] = {}
+editor['famiu/nvim-reload'] = {
+  config = function()
+    local reload = require('nvim-reload')
+    local config_dir = require('core.global').vim_path
+    local plugin_dirs = require('core.global').data_dir .. '/site/pack/*/start/*'
+
+    reload.vim_reload_dirs = {
+        config_dir,
+        plugin_dirs
+    }
+
+    reload.lua_reload_dirs = {
+        config_dir,
+        -- Note: the line below may cause issues reloading your config
+        plugin_dirs
+    }
+  end
+}
 
 return editor
