@@ -1,3 +1,7 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
 tap "derailed/k9s"
 tap "dbt-labs/dbt"
 tap "homebrew/bundle"
@@ -39,3 +43,5 @@ cask "kitty", args: { appdir: "/Applications" }
 cask "postico", args: { appdir: "/Applications" }
 cask "spotify", args: { appdir: "/Applications" }
 cask "visual-studio-code", args: { appdir: "/Applications" }
+EOF
+{{ end -}}
