@@ -15,9 +15,9 @@ end
 
 function autocmd.load_autocmds()
   local definitions = {
-    packer = {
-      {"BufWritePost","*.lua","lua require('core.pack').auto_compile()"};
-    },
+    -- packer = {
+    --   {"BufWritePost","*.lua","lua require('core.pack').auto_compile()"};
+    -- },
     bufs = {
       -- Reload vim config automatically
       {"BufWritePost",[[$VIM_PATH/{*.vim,*.yaml,vimrc} nested source $MYVIMRC | redraw]]};
@@ -28,7 +28,6 @@ function autocmd.load_autocmds()
       {"BufWritePre","MERGE_MSG","setlocal noundofile"};
       {"BufWritePre","*.tmp","setlocal noundofile"};
       {"BufWritePre","*.bak","setlocal noundofile"};
-      {"BufWritePost","~/.local/share/chezmoi/*","! chezmoi apply --source-path %"};
     };
 
     wins = {

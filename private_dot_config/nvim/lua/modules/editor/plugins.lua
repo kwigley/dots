@@ -68,4 +68,14 @@ editor['tpope/vim-fugitive'] = {
   }
 }
 
+editor['Lilja/vim-chezmoi'] = {
+  config = function()
+    vim.g.chezmoi = "enabled"
+  end
+}
+
+editor['famiu/nvim-reload'] = {
+  cmd = {'Reload', 'Restart'},
+}
+
 return editor
