@@ -8,15 +8,15 @@
 {{-   $email = promptString "email" -}}
 {{- end -}}
 
-{{- $gpgKeyId := get . "gpgKeyId" -}}
-{{- if not $gpgKeyId -}}
-{{-   $gpgKeyId = promptString "gpg key id (`gpg --list-secret-keys --keyid-format=long`)" -}}
+{{- $gpg := get . "gpg" -}}
+{{- if not $gpg -}}
+{{-   $gpg = promptString "gpg key id (`gpg --list-secret-keys --keyid-format=long`)" -}}
 {{- end -}}
 
 [data]
     name = "{{ $name }}"
     email = "{{ $email }}"
-    gpgKeyId = "{{ $gpgKeyId }}"
+    gpg = "{{ $gpg }}"
 
 [sourceVCS]
     autoCommit = true
