@@ -2,21 +2,18 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
-tap "derailed/k9s"
 tap "dbt-labs/dbt"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-brew "coreutils"
-brew "readline"
+
 brew "asdf"
-brew "sqlite"
 brew "autojump"
 brew "awscli"
 brew "bat"
-brew "bzip2"
 brew "cmake"
+brew "coreutils"
 brew "curl"
 brew "exa"
 brew "fd"
@@ -28,16 +25,17 @@ brew "kubectx"
 brew "neovim"
 brew "ninja"
 brew "postgresql"
+brew "readline"
 brew "ripgrep"
 brew "rustup-init"
 brew "sops"
+brew "sqlite"
 brew "the_silver_searcher"
 brew "tmux"
 brew "wget"
 brew "yq"
 brew "zlib"
-brew "derailed/k9s/k9s"
-cask "docker", args: { appdir: "/Applications" }
+
 cask "amethyst", args: { appdir: "/Applications" }
 cask "kitty", args: { appdir: "/Applications" }
 cask "postico", args: { appdir: "/Applications" }
