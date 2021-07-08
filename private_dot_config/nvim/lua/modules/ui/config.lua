@@ -61,7 +61,7 @@ function config.nvim_bufferline()
       tab_size = 18,
       show_buffer_close_icons = false,
       offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "center"}},
-      diagnostics_indicator = function(count, level, _diagnostics_dict)
+      diagnostics_indicator = function(count, level, _)
         local icon = level:match("error") and " " or " "
         return " " .. icon .. count
       end
