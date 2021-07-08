@@ -74,8 +74,6 @@ editor['Lilja/vim-chezmoi'] = {
   end
 }
 
-editor['famiu/nvim-reload'] = {
-  cmd = {'Reload', 'Restart'},
-}
+editor['famiu/nvim-reload'] = {}
 
 return editor
