@@ -28,8 +28,8 @@ util.vnoremap("<A-k>", ":m '<-2<CR>gv=gv")
 util.inoremap("<A-k>", "<Esc>:m .-2<CR>==gi")
 
 -- Switch buffers with tab
-util.nnoremap("<C-Left>", ":bprevious<cr>")
-util.nnoremap("<C-Right>", ":bnext<cr>")
+util.nnoremap("<Tab>", ":bnext<cr>")
+util.nnoremap("<S-Tab>", ":bprevious<cr>")
 
 -- Easier pasting
 util.nnoremap("[p", ":pu!<cr>")
@@ -149,6 +149,7 @@ local leader = {
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Goto Symbol" },
     h = { "<cmd>Telescope command_history<cr>", "Command History" },
     m = { "<cmd>Telescope marks<cr>", "Jump to Mark" },
+    w = { "<cmd>Telescope grep_string<cr>", "Grep current string" },
     r = { "<cmd>lua require('spectre').open()<CR>", "Replace (Spectre)" },
   },
   f = {

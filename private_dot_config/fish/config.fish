@@ -17,7 +17,6 @@ abbr --add src 'source ~/.config/fish/config.fish'
 abbr --add ch chezmoi
 abbr --add rd 'rm -r'
 abbr --add c z
-abbr --add dotfiles $EDITOR ~/.config
 
 # External Configs
 set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths

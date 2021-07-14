@@ -1,5 +1,4 @@
 local util = require("util")
-local lspconfig = require("lspconfig")
 
 if vim.lsp.setup then
   vim.lsp.setup({
@@ -57,6 +56,10 @@ local function on_attach(client, bufnr)
   end
 end
 
+-- TODO move this to a util package
+local path_sep = '/'
+local cache_dir = os.getenv("HOME") .. path_sep..'.cache'..path_sep..'nvim'..path_sep
+
 local servers = {
   pyright = {},
   bashls = {},
@@ -68,9 +71,16 @@ local servers = {
   html = { cmd = { "html-languageserver", "--stdio" } },
   clangd = {},
   gopls = {},
-  ["null-ls"] = {},
+  -- ["null-ls"] = {},
   sumneko_lua = require("lua-dev").setup({
     -- library = { plugins = { "nvim-treesitter", "plenary.nvim", "telescope.nvim" } },
+    lspconfig = {
+      cmd = {
+        cache_dir.."lua-language-server/bin/macOS/lua-language-server",
+        "-E",
+        cache_dir.."lua-language-server/main.lua"
+      }
+    }
   }),
   efm = require("config.lsp.efm").config,
   vimls = {},
@@ -86,18 +96,27 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 -- require("workspace").setup()
 require("config.lsp.null-ls").setup()
 
+local server_opts = {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+}
+
+require("rust-tools").setup(
+
+
+
+
+{ server = server_opts }
+)
+
+local lspconfig = require("lspconfig")
 for server, config in pairs(servers) do
-  lspconfig[server].setup(vim.tbl_deep_extend("force", {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    },
-  }, config))
+  lspconfig[server].setup(vim.tbl_deep_extend("force", server_opts, config))
   local cfg = lspconfig[server]
   if not (cfg and cfg.cmd and vim.fn.executable(cfg.cmd[1]) == 1) then
     util.error(server .. ": cmd not found: " .. vim.inspect(cfg.cmd))
   end
 end
-
-require('rust-tools').setup({})

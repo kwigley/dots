@@ -26,7 +26,6 @@ local function plugins(use)
   -- LSP
   use({
     "neovim/nvim-lspconfig",
-    opt = true,
     event = "BufReadPre",
     wants = {
       -- "workspace.nvim",
