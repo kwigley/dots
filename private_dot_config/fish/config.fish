@@ -25,6 +25,7 @@ set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$DENO_INSTALL/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
+set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
 end

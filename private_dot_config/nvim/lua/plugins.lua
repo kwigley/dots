@@ -96,7 +96,7 @@ local function plugins(use)
       { "nvim-treesitter/playground", cmd = "TSHighlightCapturesUnderCursor" },
       "nvim-treesitter/nvim-treesitter-textobjects",
     },
-    config = [[require('config.treesitter')]],
+    config = function() require('config.treesitter') end,
   })
 
   -- Theme: colors
@@ -117,12 +117,12 @@ local function plugins(use)
   })
 
   -- Dashboard
-  use({
-    "glepnir/dashboard-nvim",
-    config = function()
-      require('config.dashboard')
-    end
-  })
+  -- use({
+  --   "glepnir/dashboard-nvim",
+  --   config = function()
+  --     require('config.dashboard')
+  --   end
+  -- })
 
   use({
     "norcalli/nvim-terminal.lua",
