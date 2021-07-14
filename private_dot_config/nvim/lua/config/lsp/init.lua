@@ -105,11 +105,7 @@ local server_opts = {
 }
 
 require("rust-tools").setup(
-
-
-
-
-{ server = server_opts }
+  { server = server_opts }
 )
 
 local lspconfig = require("lspconfig")

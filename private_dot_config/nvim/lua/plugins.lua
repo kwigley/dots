@@ -26,7 +26,7 @@ local function plugins(use)
   -- LSP
   use({
     "neovim/nvim-lspconfig",
-    event = "BufReadPre",
+    -- event = "BufReadPre",
     wants = {
       -- "workspace.nvim",
       "nvim-lsp-ts-utils",
@@ -44,14 +44,6 @@ local function plugins(use)
       "folke/lua-dev.nvim",
     },
   })
-
-  -- use({
-  --   "simrat39/rust-tools.nvim",
-  --   opt = true,
-  --   event = "BufReadPre",
-  --   wants = { "plenary.nvim", "popup.nvim" },
-  --   requires = { "nvim-lua/popup.nvim", "nvim-lua/plenary.nvim"},
-  -- })
 
   use({
     "hrsh7th/nvim-compe",
