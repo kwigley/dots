@@ -1,2 +1,4 @@
 README.md
 .gitignore
+private_dot_config/nvim/plugin/
+private_dot_config/nvim/sessions/
