@@ -225,7 +225,7 @@ local function plugins(use)
 	})
 	-- use { "Xuyuanp/scrollbar.nvim", config = function() require("config.scrollbar") end }
 
-	-- Git Gutter
+	-- Git
 	use({
 		"lewis6991/gitsigns.nvim",
 		event = "BufReadPre",
@@ -242,6 +242,14 @@ local function plugins(use)
 			require("config.octo")
 		end,
 		wants = "nvim-web-devicons",
+	})
+	use({
+		"ruifm/gitlinker.nvim",
+		wants = "plenary.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("config.gitlinker")
+		end,
 	})
 
 	-- Statusline
@@ -277,18 +285,6 @@ local function plugins(use)
 		end,
 		ft = "markdown",
 		cmd = { "MarkdownPreview" },
-	})
-	use({
-		"pyrho/nerveux.nvim",
-		ft = "markdown",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-lua/popup.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-		config = function()
-			require("config.nerveux")
-		end,
 	})
 
 	use({ "tjdevries/train.nvim", cmd = { "TrainClear", "TrainTextObj", "TrainUpDown", "TrainWord" } })
