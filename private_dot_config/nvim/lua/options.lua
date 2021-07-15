@@ -14,7 +14,7 @@ vim.opt.conceallevel = 2 -- Hide * markup for bold and italic
 vim.opt.confirm = true -- confirm to save changes before exiting modified buffer
 vim.opt.cursorline = true -- Enable highlighting of the current line
 vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.shortmess = 'I' -- don't give the intro message when starting Vim |:intro|
+vim.opt.shortmess = "I" -- don't give the intro message when starting Vim |:intro|
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- TreeSitter folding
 -- vim.opt.foldlevel = 6
 -- vim.opt.foldmethod = "expr" -- TreeSitter folding
@@ -63,17 +63,17 @@ vim.g.loaded_matchparen = 1
 
 -- Use proper syntax highlighting in code blocks
 local fences = {
-  "lua",
-  -- "vim",
-  "json",
-  "typescript",
-  "javascript",
-  "js=javascript",
-  "ts=typescript",
-  "shell=sh",
-  "python",
-  "sh",
-  "console=sh",
+	"lua",
+	-- "vim",
+	"json",
+	"typescript",
+	"javascript",
+	"js=javascript",
+	"ts=typescript",
+	"shell=sh",
+	"python",
+	"sh",
+	"console=sh",
 }
 vim.g.markdown_fenced_languages = fences
 
@@ -87,6 +87,7 @@ vim.g.vim_markdown_strikethrough = 1
 
 vim.cmd([[autocmd FileType markdown nnoremap gO <cmd>Toc<cr>]])
 vim.cmd([[autocmd FileType markdown setlocal spell]])
+vim.cmd([[autocmd FileType markdown set wrap]])
 
 -- Check if we need to reload the file when it changed
 cmd("au FocusGained * :checktime")
