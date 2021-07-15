@@ -2,7 +2,7 @@ local packer = require("util.packer")
 
 local config = {
 	profile = {
-		enable = true,
+		enable = false,
 		threshold = 0, -- the amount in ms that a plugins load time must be over for it to be included in the profile
 	},
 	display = {
@@ -118,14 +118,6 @@ local function plugins(use)
 		end,
 	})
 
-	-- Dashboard
-	-- use({
-	--   "glepnir/dashboard-nvim",
-	--   config = function()
-	--     require('config.dashboard')
-	--   end
-	-- })
-
 	use({
 		"norcalli/nvim-terminal.lua",
 		ft = "terminal",
@@ -160,7 +152,7 @@ local function plugins(use)
 			require("config.telescope")
 		end,
 		cmd = { "Telescope" },
-		keys = { "<leader><space>", "<leader>fz", "<leader>pp" },
+		keys = { "<leader><space>", "<leader>fz", "<leader>pp", "<leader>fd" },
 		wants = {
 			"plenary.nvim",
 			"popup.nvim",
