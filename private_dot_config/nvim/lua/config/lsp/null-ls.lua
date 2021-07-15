@@ -3,7 +3,7 @@ local nls = require("null-ls")
 local M = {}
 
 function M.setup()
-  nls.setup({
+  nls.config({
     debounce = 150,
     save_after_format = false,
     sources = {
@@ -12,7 +12,7 @@ function M.setup()
       nls.builtins.formatting.eslint_d,
       nls.builtins.diagnostics.shellcheck,
       nls.builtins.diagnostics.markdownlint,
-      nls.builtins.diagnostics.selene,
+      -- nls.builtins.diagnostics.selene,
     },
   })
 end

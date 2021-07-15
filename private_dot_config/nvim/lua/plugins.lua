@@ -26,7 +26,7 @@ local function plugins(use)
   -- LSP
   use({
     "neovim/nvim-lspconfig",
-    -- event = "BufReadPre",
+    event = "BufReadPre",
     wants = {
       -- "workspace.nvim",
       "nvim-lsp-ts-utils",
@@ -40,7 +40,7 @@ local function plugins(use)
       -- "folke/workspace.nvim",
       "simrat39/rust-tools.nvim",
       "jose-elias-alvarez/nvim-lsp-ts-utils",
-      "jose-elias-alvarez/null-ls.nvim",
+      {"jose-elias-alvarez/null-ls.nvim", branch = "lspconfig"},
       "folke/lua-dev.nvim",
     },
   })
