@@ -8,12 +8,12 @@ presets.objects["a("] = nil
 wk.setup({ show_help = false, triggers = "auto", plugins = { spelling = true }, key_labels = { ["<leader>"] = "SPC" } })
 
 -- Move to window using the <ctrl> movement keys
-util.nmap("<left>", "<C-w>h")
-util.nmap("<down>", "<C-w>j")
-util.nmap("<up>", "<C-w>k")
-util.nmap("<right>", "<C-w>l")
+util.nmap("<C-h>", "<C-w>h")
+util.nmap("<C-j>", "<C-w>j")
+util.nmap("<C-k>", "<C-w>k")
+util.nmap("<C-l>", "<C-w>l")
 
--- Resize window using <ctrl> arrow keys
+-- Resize window using <shift> arrow keys
 util.nnoremap("<S-Up>", ":resize +2<CR>")
 util.nnoremap("<S-Down>", ":resize -2<CR>")
 util.nnoremap("<S-Left>", ":vertical resize -2<CR>")
@@ -94,7 +94,6 @@ local leader = {
 		["s"] = { "<C-W>s", "split-window-below" },
 		["v"] = { "<C-W>v", "split-window-right" },
 	},
-	-- TODO add vista plugin
 	c = { o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" } },
 	b = {
 		name = "+buffer",
@@ -103,7 +102,8 @@ local leader = {
 		["["] = { "<cmd>:BufferLineCyclePrev<CR>", "Previous Buffer" },
 		["n"] = { "<cmd>:BufferLineCycleNext<CR>", "Next Buffer" },
 		["]"] = { "<cmd>:BufferLineCycleNext<CR>", "Next Buffer" },
-		["d"] = { "<cmd>:bd<CR>", "Delete Buffer" },
+		["d"] = { "<cmd>:Bdelete this<CR>", "Delete Buffer" },
+		["o"] = { "<cmd>:Bdelete other<CR>", "Delete Other Buffers" },
 		["g"] = { "<cmd>:BufferLinePick<CR>", "Goto Buffer" },
 	},
 	g = {

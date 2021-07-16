@@ -6,7 +6,7 @@ set -gx GPG_TTY (tty)
 set -gx ASDF_DATA_DIR ~/.asdf
 set -gx DENO_INSTALL ~/.deno
 set -gx GOPATH $HOME/go
-set -gx VIMRUNTIME (nvim --clean --headless --cmd 'echo $VIMRUNTIME|q')
+set -gx VIMRUNTIME /usr/local/Cellar/neovim/0.5.0/share/nvim/runtime
 
 # Abbr/Aliases
 abbr --add senv 'source env/bin/activate.fish'

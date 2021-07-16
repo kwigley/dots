@@ -190,6 +190,10 @@ local function plugins(use)
 			require("config.bufferline")
 		end,
 	})
+  use({
+    "Asheq/close-buffers.vim",
+    cmd = {"Bdelete"},
+  })
 
 	-- Terminal
 	use({
