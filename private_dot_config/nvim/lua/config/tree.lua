@@ -8,7 +8,8 @@ vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_disable_netrw = 0
 vim.g.nvim_tree_lsp_diagnostics = 1
+vim.g.nvim_tree_quit_on_open = 1
 
 require("nvim-tree.events").on_nvim_tree_ready(function()
-  vim.cmd("NvimTreeRefresh")
+	vim.cmd("NvimTreeRefresh")
 end)

@@ -47,7 +47,7 @@ vim.opt.undofile = true
 vim.opt.undolevels = 10000
 vim.opt.updatetime = 200 -- save swap file and trigger CursorHold
 vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
-vim.opt.wrap = false -- Disable line wrap
+vim.opt.wrap = true -- Enable line wrap
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 
 -- don't load the plugins below
@@ -87,7 +87,6 @@ vim.g.vim_markdown_strikethrough = 1
 
 vim.cmd([[autocmd FileType markdown nnoremap gO <cmd>Toc<cr>]])
 vim.cmd([[autocmd FileType markdown setlocal spell]])
-vim.cmd([[autocmd FileType markdown set wrap]])
 
 -- Check if we need to reload the file when it changed
 cmd("au FocusGained * :checktime")
