@@ -190,10 +190,10 @@ local function plugins(use)
 			require("config.bufferline")
 		end,
 	})
-  use({
-    "Asheq/close-buffers.vim",
-    cmd = {"Bdelete"},
-  })
+	use({
+		"Asheq/close-buffers.vim",
+		cmd = { "Bdelete" },
+	})
 
 	-- Terminal
 	use({
@@ -381,9 +381,6 @@ local function plugins(use)
 		end,
 	})
 
-	-- use({ "wellle/targets.vim" })
-
-	-- use("DanilaMihailov/vim-tips-wiki")
 	use("nanotee/luv-vimdocs")
 	use({
 		"andymass/vim-matchup",
