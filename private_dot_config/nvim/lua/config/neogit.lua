@@ -1,8 +1,8 @@
 require("neogit").setup({
-  signs = {
-    -- { CLOSED, OPENED }
-    section = { "", "" },
-    item = { "", "" },
-    hunk = { "", "" },
-  },
+	signs = {
+		-- { CLOSED, OPENED }
+		section = { "", "" },
+		item = { "", "" },
+		hunk = { "", "" },
+	},
 })

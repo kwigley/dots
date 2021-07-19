@@ -226,6 +226,7 @@ local leader = {
 		l = { "<cmd>TroubleToggle loclist<cr>", "Open Location List" },
 		q = { "<cmd>TroubleToggle quickfix<cr>", "Open Quickfix List" },
 		t = { "<cmd>TodoTrouble<cr>", "Todo Trouble" },
+		T = { "<cmd>TodoTelescope<cr>", "Todo Telescope" },
 	},
 	z = { [[<cmd>ZenMode<cr>]], "Zen Mode" },
 	T = { [[<Plug>PlenaryTestFile]], "Plenary Test" },
