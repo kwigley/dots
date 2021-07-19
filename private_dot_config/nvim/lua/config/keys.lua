@@ -153,6 +153,8 @@ local leader = {
 		f = { "<cmd>Telescope find_files<cr>", "Find File" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		n = { "<cmd>enew<cr>", "New File" },
+		c = { "<cmd>let @*=expand('%')<cr>", "Copy relative path" },
+		C = { "<cmd>let @*=expand('%:p')<cr>", "Copy absolute path" },
 		z = "Zoxide",
 		d = "Dot Files",
 	},
