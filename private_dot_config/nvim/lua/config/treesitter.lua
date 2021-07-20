@@ -108,3 +108,11 @@ parser_config.markdown = {
 		files = { "src/parser.c", "src/scanner.cc" },
 	},
 }
+parser_config.jinja2 = {
+	install_info = {
+		url = "https://github.com/dbt-labs/tree-sitter-jinja2",
+		branch = "main",
+		files = { "src/parser.c" },
+	},
+	filetype = "sql",
+}
