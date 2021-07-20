@@ -1,5 +1,5 @@
 # dots
-My config files managed by [`chezmoi`](https://www.chezmoi.io/)
+My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
 ### Install
 `sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply kwigley/dots`
