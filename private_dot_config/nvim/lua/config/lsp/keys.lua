@@ -59,7 +59,9 @@ function M.setup(client, bufnr)
 	util.nnoremap("[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 	util.nnoremap("]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 
-	for _, c in ipairs(client.resolved_capabilities.signature_help_trigger_characters) do
+	-- local triggers = client.resolved_capabilities.signature_help_trigger_characters
+	local triggers = { "," }
+	for _, c in ipairs(triggers) do
 		util.inoremap(c, function()
 			vim.defer_fn(vim.lsp.buf.signature_help, 0)
 			return c

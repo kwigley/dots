@@ -35,13 +35,4 @@ require("compe").setup({
 util.inoremap("<C-Space>", "compe#complete()", { expr = true })
 util.inoremap("<C-e>", "compe#close('<C-e>')", { expr = true })
 
-local function complete()
-	if vim.fn.pumvisible() == 1 then
-		return vim.fn["compe#confirm"]({ keys = "<cr>", select = true })
-	else
-		return require("nvim-autopairs").autopairs_cr()
-	end
-end
-
-util.imap("<CR>", complete, { expr = true })
-vim.cmd([[autocmd User CompeConfirmDone silent! lua vim.lsp.buf.signature_help()]])
+-- vim.cmd([[autocmd User CompeConfirmDone silent! lua vim.lsp.buf.signature_help()]])

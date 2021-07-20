@@ -6,6 +6,7 @@ end
 
 local ts_configs = require("nvim-treesitter.configs")
 ts_configs.setup({
+	autopairs = { enable = true },
 	ensure_installed = {
 		"bash",
 		"c",
@@ -35,7 +36,7 @@ ts_configs.setup({
 		-- "markdown",
 	},
 	highlight = { enable = true, use_languagetree = true },
-	indent = { enable = false },
+	indent = { enable = true },
 	context_commentstring = { enable = true },
 	incremental_selection = {
 		enable = true,

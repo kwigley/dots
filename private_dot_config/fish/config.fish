@@ -18,6 +18,7 @@ abbr --add ch chezmoi
 abbr --add rd 'rm -r'
 abbr --add c z
 abbr --add dots 'cd (chezmoi source-path) && $EDITOR'
+abbr --add update 'chezmoi execute-template < ~/.local/share/chezmoi/run_once_before_install-packages-darwin.sh.tmpl | sh'
 
 # External Configs
 set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
