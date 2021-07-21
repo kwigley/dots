@@ -5,4 +5,7 @@ require("neogit").setup({
 		item = { "", "" },
 		hunk = { "", "" },
 	},
+	integrations = {
+		diffview = true,
+	},
 })
