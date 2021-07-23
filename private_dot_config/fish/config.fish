@@ -17,7 +17,7 @@ abbr --add src 'source ~/.config/fish/config.fish'
 abbr --add ch chezmoi
 abbr --add rd 'rm -r'
 abbr --add c z
-abbr --add dots 'cd (chezmoi source-path) && $EDITOR'
+abbr --add dots 'cd (chezmoi source-path)'
 abbr --add update 'chezmoi execute-template < ~/.local/share/chezmoi/run_once_before_install-packages-darwin.sh.tmpl | sh'
 
 # External Configs

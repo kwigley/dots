@@ -15,7 +15,8 @@ function M.setup(client, bufnr)
 			d = { "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "Line Diagnostics" },
 			l = {
 				name = "+lsp",
-				i = { "<cmd>LspInfo<cr>", "Lsp Info" },
+				x = { "<cmd>lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>", "Restart Lsp" },
+				i = { "<cmd>LspInfo<CR>", "Lsp Info" },
 				a = { "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", "Add Folder" },
 				r = { "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", "Remove Folder" },
 				l = {
@@ -25,8 +26,8 @@ function M.setup(client, bufnr)
 			},
 		},
 		x = {
-			s = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Search Document Diagnostics" },
-			w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+			s = { "<cmd>Telescope lsp_document_diagnostics<CR>", "Search Document Diagnostics" },
+			w = { "<cmd>Telescope lsp_workspace_diagnostics<CR>", "Workspace Diagnostics" },
 		},
 	}
 

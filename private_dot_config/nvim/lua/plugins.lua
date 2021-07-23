@@ -40,7 +40,7 @@ local function plugins(use)
 			-- "folke/workspace.nvim",
 			"simrat39/rust-tools.nvim",
 			"jose-elias-alvarez/nvim-lsp-ts-utils",
-			{ "jose-elias-alvarez/null-ls.nvim", branch = "lspconfig" },
+			"jose-elias-alvarez/null-ls.nvim",
 			"folke/lua-dev.nvim",
 		},
 	})
@@ -303,19 +303,14 @@ local function plugins(use)
 		cmd = { "MarkdownPreview" },
 	})
 
-	use({ "tjdevries/train.nvim", cmd = { "TrainClear", "TrainTextObj", "TrainUpDown", "TrainWord" } })
-
-	-- use({ "wfxr/minimap.vim", config = function()
-	--   require("config.minimap")
-	-- end })
+	-- use({ "tjdevries/train.nvim", cmd = { "TrainClear", "TrainTextObj", "TrainUpDown", "TrainWord" } })
 
 	use({
 		"phaazon/hop.nvim",
 		keys = { "gh" },
-		cmd = { "HopWord", "HopChar1" },
+		cmd = { "HopWord" },
 		config = function()
 			require("util").nmap("gh", "<cmd>HopWord<CR>")
-			-- require("util").nmap("s", "<cmd>HopChar1<CR>")
 			-- you can configure Hop the way you like here; see :h hop-config
 			require("hop").setup({})
 		end,
@@ -341,18 +336,18 @@ local function plugins(use)
 
 	use({
 		"folke/persistence.nvim",
-		event = "VimEnter",
+		event = "BufReadPre",
 		module = "persistence",
 		config = function()
 			require("persistence").setup()
 		end,
 	})
 
-	use({ "tweekmonster/startuptime.vim", cmd = "StartupTime" })
+	-- use({ "tweekmonster/startuptime.vim", cmd = "StartupTime" })
 
 	use({ "mbbill/undotree", cmd = "UndotreeToggle" })
 
-	use({ "mjlbach/babelfish.nvim", module = "babelfish" })
+	-- use({ "mjlbach/babelfish.nvim", module = "babelfish" })
 
 	use({
 		"folke/zen-mode.nvim",
@@ -393,7 +388,8 @@ local function plugins(use)
 		end,
 	})
 
-	use("nanotee/luv-vimdocs")
+	-- use("nanotee/luv-vimdocs")
+
 	use({
 		"andymass/vim-matchup",
 		event = "CursorMoved",
