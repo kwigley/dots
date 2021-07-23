@@ -149,8 +149,8 @@ local leader = {
 	},
 	f = {
 		name = "+file",
-		g = { "<cmd>NvimTreeFindFile<cr>", "NvimTree Current File" },
-		t = { "<cmd>NvimTreeToggle<cr>", "NvimTree" },
+		-- g = { "<cmd>NvimTreeFindFile<cr>", "NvimTree Current File" },
+		-- t = { "<cmd>NvimTreeToggle<cr>", "NvimTree" },
 		f = { "<cmd>Telescope find_files<cr>", "Find File" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		n = { "<cmd>enew<cr>", "New File" },

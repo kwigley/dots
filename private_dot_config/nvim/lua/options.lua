@@ -14,7 +14,7 @@ vim.opt.conceallevel = 2 -- Hide * markup for bold and italic
 vim.opt.confirm = true -- confirm to save changes before exiting modified buffer
 vim.opt.cursorline = true -- Enable highlighting of the current line
 vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.shortmess = "I" -- don't give the intro message when starting Vim |:intro|
+vim.opt.shortmess:append("I") -- don't give the intro message when starting Vim |:intro|
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- TreeSitter folding
 -- vim.opt.foldlevel = 6
 -- vim.opt.foldmethod = "expr" -- TreeSitter folding
@@ -58,9 +58,10 @@ vim.g.loaded_zipPlugin = 1
 vim.g.loaded_2html_plugin = 1
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrwSettings = 1
+vim.g.loaded_netrwFileHandlers = 1
 vim.g.loaded_matchit = 1
 vim.g.loaded_matchparen = 1
-
 -- Use proper syntax highlighting in code blocks
 local fences = {
 	"lua",
@@ -110,5 +111,5 @@ cmd([[autocmd BufRead,BufNewFile *.fish setfiletype fish]])
 cmd([[autocmd BufRead,BufNewFile *.nix setfiletype nix]])
 
 -- windows to close with "q"
-vim.cmd([[autocmd FileType help,startuptime,qf,lspinfo nnoremap <buffer><silent> q :close<CR>]])
+vim.cmd([[autocmd FileType help,startuptime,qf,lspinfo,spectre_panel nnoremap <buffer><silent> q :close<CR>]])
 vim.cmd([[autocmd FileType man nnoremap <buffer><silent> q :quit<CR>]])

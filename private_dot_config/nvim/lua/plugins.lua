@@ -136,11 +136,19 @@ local function plugins(use)
 		requires = { "nvim-lua/popup.nvim", "nvim-lua/plenary.nvim" },
 	})
 
+	-- use({
+	-- 	"kyazdani42/nvim-tree.lua",
+	-- 	cmd = { "NvimTreeToggle", "NvimTreeClose", "NvimTreeFindFile" },
+	-- 	config = function()
+	-- 		require("config.tree")
+	-- 	end,
+	-- })
 	use({
-		"kyazdani42/nvim-tree.lua",
-		cmd = { "NvimTreeToggle", "NvimTreeClose", "NvimTreeFindFile" },
+		"tamago324/lir.nvim",
+		wants = { "nvim-web-devicons", "plenary.nvim", "lir-git-status.nvim" },
+		requires = { "nvim-lua/plenary.nvim", "tamago324/lir-git-status.nvim" },
 		config = function()
-			require("config.tree")
+			require("config.lir")
 		end,
 	})
 
