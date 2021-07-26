@@ -84,7 +84,8 @@ local servers = {
 	}),
 	efm = require("config.lsp.efm").config,
 	vimls = {},
-	tailwindcss = {},
+	terraformls = {},
+	yamlls = {},
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

@@ -31,9 +31,13 @@ function M.setup(client, bufnr)
 		},
 	}
 
-	if client.name == "typescript" then
-		keymap.c.o = { "<cmd>:TSLspOrganize<CR>", "Organize Imports" }
-		keymap.c.R = { "<cmd>:TSLspRenameFile<CR>", "Rename File" }
+	if client.name == "tsserver" then
+		keymap.c.o = { "<cmd>TSLspOrganize<CR>", "Organize Imports" }
+		keymap.c.R = { "<cmd>TSLspRenameFile<CR>", "Rename File" }
+	end
+
+	if client.name == "rust_analyzer" then
+		keymap.c.R = { "<CMD>RustRunnables<CR>", "Rust Runnables" }
 	end
 
 	local keymap_visual = {

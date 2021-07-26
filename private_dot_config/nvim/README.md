@@ -2,11 +2,11 @@
 
 ### Highlights
 - built-in lsp ❤️
-- [autocompletion](https://github.com/hrsh7th/nvim-compe)
+- [nvim-compe](https://github.com/hrsh7th/nvim-compe) - autocompletion
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [tokyonight theming](https://github.com/folke/tokyonight.nvim)
+- [tokyonight](https://github.com/folke/tokyonight.nvim) - color theme
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) - fuzzy finder
-- [lualine](https://github.com/hoob3rt/lualine.nvim)
+- [lualine](https://github.com/hoob3rt/lualine.nvim) - status line
 - [bufferline](https://github.com/akinsho/nvim-bufferline.lua)
 
 <p align="center">

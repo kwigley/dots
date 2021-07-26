@@ -12,7 +12,7 @@ function M.setup()
 			nls.builtins.formatting.eslint_d,
 			nls.builtins.diagnostics.shellcheck,
 			nls.builtins.diagnostics.markdownlint,
-			-- -- nls.builtins.diagnostics.selene,
+			-- nls.builtins.diagnostics.selene,
 		},
 	})
 end
