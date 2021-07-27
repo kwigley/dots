@@ -89,6 +89,7 @@ local function plugins(use)
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
+		branch = "0.5-compat",
 		run = ":TSUpdate",
 		opt = true,
 		event = "BufRead",
