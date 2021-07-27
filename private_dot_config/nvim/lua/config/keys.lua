@@ -7,12 +7,6 @@ local presets = require("which-key.plugins.presets")
 presets.objects["a("] = nil
 wk.setup({ show_help = false, triggers = "auto", plugins = { spelling = true }, key_labels = { ["<leader>"] = "SPC" } })
 
--- Move to window using the <ctrl> movement keys
-util.nmap("<C-h>", "<C-w>h")
-util.nmap("<C-j>", "<C-w>j")
-util.nmap("<C-k>", "<C-w>k")
-util.nmap("<C-l>", "<C-w>l")
-
 -- Resize window using <shift> arrow keys
 util.nnoremap("<S-Up>", ":resize +2<CR>")
 util.nnoremap("<S-Down>", ":resize -2<CR>")

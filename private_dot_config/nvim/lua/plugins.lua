@@ -169,7 +169,6 @@ local function plugins(use)
 			"telescope-project.nvim",
 			"trouble.nvim",
 			"telescope-symbols.nvim",
-			-- "octo.nvim",
 		},
 		requires = {
 			"nvim-telescope/telescope-z.nvim",
@@ -178,7 +177,6 @@ local function plugins(use)
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-symbols.nvim",
 			"nvim-telescope/telescope-fzy-native.nvim",
-			-- "pwntester/octo.nvim",
 		},
 	})
 
@@ -397,6 +395,8 @@ local function plugins(use)
 		event = "CursorMoved",
 	})
 	use({ "camspiers/snap", rocks = { "fzy" }, module = "snap" })
+
+	use({ "knubie/vim-kitty-navigator", run = { "cp *.py $HOME/.config/kitty" } })
 end
 
 return packer.setup(config, plugins)
