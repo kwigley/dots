@@ -99,6 +99,7 @@ local leader = {
 		["]"] = { "<cmd>:BufferLineCycleNext<CR>", "Next Buffer" },
 		["d"] = { "<cmd>:Bdelete this<CR>", "Delete Buffer" },
 		["o"] = { "<cmd>:Bdelete other<CR>", "Delete Other Buffers" },
+		["a"] = { "<cmd>:Bdelete all<CR>", "Delete All Buffers" },
 		["g"] = { "<cmd>:BufferLinePick<CR>", "Goto Buffer" },
 	},
 	g = {
