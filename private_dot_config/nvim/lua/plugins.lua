@@ -95,7 +95,7 @@ local function plugins(use)
 		event = "BufRead",
 		requires = {
 			{ "nvim-treesitter/playground", cmd = "TSHighlightCapturesUnderCursor" },
-			"nvim-treesitter/nvim-treesitter-textobjects",
+			{ "nvim-treesitter/nvim-treesitter-textobjects", branch = "0.5-compat" },
 		},
 		config = function()
 			require("config.treesitter")
@@ -137,13 +137,6 @@ local function plugins(use)
 		requires = { "nvim-lua/popup.nvim", "nvim-lua/plenary.nvim" },
 	})
 
-	-- use({
-	-- 	"kyazdani42/nvim-tree.lua",
-	-- 	cmd = { "NvimTreeToggle", "NvimTreeClose", "NvimTreeFindFile" },
-	-- 	config = function()
-	-- 		require("config.tree")
-	-- 	end,
-	-- })
 	use({
 		"tamago324/lir.nvim",
 		wants = { "nvim-web-devicons", "plenary.nvim", "lir-git-status.nvim" },
@@ -228,7 +221,6 @@ local function plugins(use)
 			require("config.specs")
 		end,
 	})
-	-- use { "Xuyuanp/scrollbar.nvim", config = function() require("config.scrollbar") end }
 
 	-- Git
 	use({
@@ -304,14 +296,13 @@ local function plugins(use)
 		cmd = { "MarkdownPreview" },
 	})
 
-	-- use({ "tjdevries/train.nvim", cmd = { "TrainClear", "TrainTextObj", "TrainUpDown", "TrainWord" } })
-
 	use({
 		"phaazon/hop.nvim",
 		keys = { "gh" },
-		cmd = { "HopWord" },
+		cmd = { "HopWord", "HopLine" },
 		config = function()
 			require("util").nmap("gh", "<cmd>HopWord<CR>")
+			require("util").nmap("gl", "<cmd>HopLine<CR>")
 			-- you can configure Hop the way you like here; see :h hop-config
 			require("hop").setup({})
 		end,
@@ -389,7 +380,7 @@ local function plugins(use)
 		end,
 	})
 
-	-- use("nanotee/luv-vimdocs")
+	use("nanotee/luv-vimdocs")
 
 	use({
 		"andymass/vim-matchup",
