@@ -89,13 +89,12 @@ local function plugins(use)
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		branch = "0.5-compat",
 		run = ":TSUpdate",
 		opt = true,
 		event = "BufRead",
 		requires = {
 			{ "nvim-treesitter/playground", cmd = "TSHighlightCapturesUnderCursor" },
-			{ "nvim-treesitter/nvim-treesitter-textobjects", branch = "0.5-compat" },
+			{ "nvim-treesitter/nvim-treesitter-textobjects" },
 		},
 		config = function()
 			require("config.treesitter")
