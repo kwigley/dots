@@ -1,5 +1,6 @@
 return {
 	setup = function(client)
+		client.resolved_capabilities.document_formatting = false
 		local ts = require("nvim-lsp-ts-utils")
 		ts.setup({
 			disable_commands = false,

@@ -7,11 +7,13 @@ function M.setup()
 		debounce = 150,
 		save_after_format = false,
 		sources = {
-			nls.builtins.formatting.prettierd,
+			nls.builtins.formatting.prettier.with({
+				filetypes = { "css", "html", "json", "yaml", "markdown" },
+			}),
+			nls.builtins.formatting.prettier_d_slim,
 			nls.builtins.formatting.stylua,
-			nls.builtins.formatting.eslint_d,
 			nls.builtins.diagnostics.shellcheck,
-			nls.builtins.diagnostics.markdownlint,
+			-- nls.builtins.diagnostics.markdownlint,
 			-- nls.builtins.diagnostics.selene,
 		},
 	})
