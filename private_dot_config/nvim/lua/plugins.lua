@@ -94,7 +94,8 @@ local function plugins(use)
 		event = "BufRead",
 		requires = {
 			{ "nvim-treesitter/playground", cmd = "TSHighlightCapturesUnderCursor" },
-			{ "nvim-treesitter/nvim-treesitter-textobjects" },
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			"RRethy/nvim-treesitter-textsubjects",
 		},
 		config = function()
 			require("config.treesitter")
