@@ -28,7 +28,6 @@ local function plugins(use)
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		wants = {
-			-- "workspace.nvim",
 			"nvim-lsp-ts-utils",
 			"null-ls.nvim",
 			"lua-dev.nvim",
@@ -37,7 +36,6 @@ local function plugins(use)
 			require("config.lsp")
 		end,
 		requires = {
-			-- "folke/workspace.nvim",
 			"simrat39/rust-tools.nvim",
 			"jose-elias-alvarez/nvim-lsp-ts-utils",
 			"jose-elias-alvarez/null-ls.nvim",
@@ -174,7 +172,7 @@ local function plugins(use)
 		},
 	})
 
-	-- Indent Guides and rainbow brackets
+	-- Indent Guides
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		event = "BufReadPre",
@@ -335,11 +333,9 @@ local function plugins(use)
 		end,
 	})
 
-	-- use({ "tweekmonster/startuptime.vim", cmd = "StartupTime" })
+	use({ "tweekmonster/startuptime.vim", cmd = "StartupTime" })
 
 	use({ "mbbill/undotree", cmd = "UndotreeToggle" })
-
-	-- use({ "mjlbach/babelfish.nvim", module = "babelfish" })
 
 	use({
 		"folke/zen-mode.nvim",
@@ -349,7 +345,7 @@ local function plugins(use)
 		requires = { "folke/twilight.nvim" },
 		config = function()
 			require("zen-mode").setup({
-				plugins = { gitsigns = true, tmux = true, kitty = { enabled = false, font = "+2" } },
+				plugins = { gitsigns = true, kitty = { enabled = true, font = "+2" } },
 			})
 		end,
 	})
@@ -380,13 +376,10 @@ local function plugins(use)
 		end,
 	})
 
-	use("nanotee/luv-vimdocs")
-
 	use({
 		"andymass/vim-matchup",
 		event = "CursorMoved",
 	})
-	use({ "camspiers/snap", rocks = { "fzy" }, module = "snap" })
 
 	use({ "knubie/vim-kitty-navigator", run = { "cp *.py $HOME/.config/kitty" } })
 end
