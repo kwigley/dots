@@ -7,6 +7,7 @@ vim.bo.smartindent = true -- Insert indents automatically
 vim.bo.undofile = true ]]
 
 vim.g.mapleader = " "
+
 -- vim.g.maplocalleader = ","
 vim.opt.autowrite = true -- enable auto write
 vim.opt.clipboard = "unnamedplus" -- sync with system clipboard

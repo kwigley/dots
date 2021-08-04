@@ -1,6 +1,7 @@
 # Neovim Config
 
 ### Highlights
+
 - built-in lsp ❤️
 - [nvim-compe](https://github.com/hrsh7th/nvim-compe) - autocompletion
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)

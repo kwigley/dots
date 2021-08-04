@@ -3,7 +3,7 @@ local mark_actions = require("lir.mark.actions")
 local clipboard_actions = require("lir.clipboard.actions")
 
 require("lir").setup({
-	show_hidden_files = true,
+	show_hidden_files = false,
 	devicons_enable = true,
 	mappings = {
 		["<CR>"] = actions.edit,

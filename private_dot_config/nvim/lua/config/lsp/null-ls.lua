@@ -13,8 +13,7 @@ function M.setup()
 			nls.builtins.formatting.prettier_d_slim,
 			nls.builtins.formatting.stylua,
 			nls.builtins.diagnostics.shellcheck,
-			-- nls.builtins.diagnostics.markdownlint,
-			-- nls.builtins.diagnostics.selene,
+			nls.builtins.diagnostics.selene,
 		},
 	})
 end

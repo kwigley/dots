@@ -1,14 +1,17 @@
 # dots
+
 My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
 ### Install
+
 `sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply kwigley/dots`
 
 ### Included Tools & Apps
+
 - [neovim](https://neovim.io/) - text editor
 - [kitty](https://sw.kovidgoyal.net/kitty/) - GPU based terminal emulator
 - [fish](https://fishshell.com/) - user-friendly command line
-shell
+  shell
 - [alacritty](https://github.com/alacritty/alacritty) - OpenGL terminal emulator
 - [homebrew](https://brew.sh/) - Package Manager for macOS
 - [asdf](https://asdf-vm.com/#/) - runtime version manager (for multiple versions of python, nodejs, lua, etc.)

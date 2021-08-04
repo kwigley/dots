@@ -1,0 +1,26 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.2
+    hooks:
+      - id: prettier
+  - repo: https://github.com/hugoh/pre-commit-fish
+    rev: v1.2
+    hooks:
+      - id: fish_syntax
+      - id: fish_indent
+  - repo: local
+    hooks:
+      - id: stylua
+        name: format lua files
+        language: system
+        entry: stylua --glob **/*.lua --
+        types: [lua]
