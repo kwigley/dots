@@ -1,7 +1,3 @@
-local function clock()
-	return " " .. os.date("%H:%M")
-end
-
 local function lsp_progress()
 	local messages = vim.lsp.util.get_progress_messages()
 	if #messages == 0 then
@@ -22,8 +18,6 @@ vim.cmd([[autocmd User LspProgressUpdate let &ro = &ro]])
 local config = {
 	options = {
 		theme = "tokyonight",
-		-- section_separators = { "", "" },
-		-- component_separators = { "", "" },
 		icons_enabled = true,
 	},
 	sections = {
@@ -31,8 +25,6 @@ local config = {
 		lualine_b = { "branch" },
 		lualine_c = { { "diagnostics", sources = { "nvim_lsp" } }, { "filename", path = 1 } },
 		lualine_x = { "filetype", lsp_progress },
-		-- lualine_y = { "progress" },
-		-- lualine_z = { clock },
 	},
 	extensions = { "nvim-tree", "quickfix" },
 }
@@ -51,9 +43,5 @@ function M.load()
 end
 
 M.load()
-
--- vim.api.nvim_exec([[
---   autocmd ColorScheme * lua require("config.lualine").load();
--- ]], false)
 
 return M
