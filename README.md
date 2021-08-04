@@ -1,4 +1,5 @@
 # dots
+[![pre-commit](https://github.com/kwigley/dots/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/kwigley/dots/actions/workflows/pre-commit.yml)
 
 My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
