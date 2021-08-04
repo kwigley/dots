@@ -24,3 +24,7 @@ repos:
         language: system
         entry: stylua --glob **/*.lua --
         types: [lua]
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.4.1
+    hooks:
+      - id: check-github-workflows
