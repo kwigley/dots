@@ -73,7 +73,6 @@ local servers = {
 	gopls = {},
 	["null-ls"] = {},
 	sumneko_lua = require("lua-dev").setup({
-		-- library = { plugins = { "nvim-treesitter", "plenary.nvim", "telescope.nvim" } },
 		lspconfig = {
 			cmd = {
 				cache_dir .. "lua-language-server/bin/macOS/lua-language-server",

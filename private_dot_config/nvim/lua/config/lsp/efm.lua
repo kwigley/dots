@@ -1,65 +1,12 @@
 local M = {}
 
-local stylua = { formatCommand = "stylua -", formatStdin = true }
-local selene = {
-	lintCommand = "selene --display-style quiet -",
-	lintIgnoreExitCode = true,
-	lintStdin = true,
-	lintFormats = { "%f:%l:%c: %tarning%m", "%f:%l:%c: %tarning%m" },
-}
-
-local prettierLocal = {
-	formatCommand = "./node_modules/.bin/prettier --stdin --stdin-filepath ${INPUT}",
-	formatStdin = true,
-}
-
-local prettierGlobal = {
-	formatCommand = "prettier --stdin --stdin-filepath ${INPUT}",
-	formatStdin = true,
-}
-
-local eslint = {
-	lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
-	lintIgnoreExitCode = true,
-	lintStdin = true,
-	lintFormats = { "%f(%l,%c): %tarning %m", "%f(%l,%c): %trror %m" },
-}
-
-local shellcheck = {
-	lintCommand = "shellcheck -f gcc -x -",
-	lintStdin = true,
-	lintFormats = { "%f=%l:%c: %trror: %m", "%f=%l:%c: %tarning: %m", "%f=%l:%c: %tote: %m" },
-}
-
-local markdownlint = {
-	lintCommand = "markdownlint -s",
-	lintStdin = true,
-	lintFormats = { "%f:%l:%c %m" },
-}
-
 local fish = { formatCommand = "fish_indent", formatStdin = true }
-
-local eslintPrettier = { prettierLocal, eslint }
 
 M.config = {
 	init_options = { documentFormatting = true },
 	settings = {
 		rootMarkers = { "package.json", ".git" },
 		languages = {
-			-- lua = { selene, stylua },
-			-- typescript = { prettierLocal },
-			-- javascript = eslintPrettier,
-			-- typescriptreact = eslintPrettier,
-			-- javascriptreact = eslintPrettier,
-			-- ["typescript.tsx"] = eslintPrettier,
-			-- ["javascript.tsx"] = eslintPrettier,
-			-- yaml = { prettierLocal },
-			-- json = { prettierGlobal },
-			-- html = { prettierLocal },
-			-- scss = { prettierLocal },
-			-- css = { prettierLocal },
-			-- markdown = { prettierLocal, markdownlint },
-			-- sh = { shellcheck },
 			fish = { fish },
 		},
 	},

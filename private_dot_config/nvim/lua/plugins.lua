@@ -260,14 +260,6 @@ local function plugins(use)
 	})
 
 	-- Statusline
-	-- use({
-	-- 	"hoob3rt/lualine.nvim",
-	-- 	event = "VimEnter",
-	-- 	config = function()
-	-- 		require("config.lualine")
-	-- 	end,
-	-- 	wants = "nvim-web-devicons",
-	-- })
 	use({
 		"famiu/feline.nvim",
 		event = "VimEnter",
