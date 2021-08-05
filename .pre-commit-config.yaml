@@ -20,7 +20,7 @@ repos:
   - repo: local
     hooks:
       - id: stylua
-        name: format lua files
+        name: Format Lua Files
         language: system
         entry: stylua --glob **/*.lua --
         types: [lua]
