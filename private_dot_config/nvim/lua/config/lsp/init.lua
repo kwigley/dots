@@ -93,7 +93,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 	properties = { "documentation", "detail", "additionalTextEdits" },
 }
 
--- require("workspace").setup()
 require("config.lsp.null-ls").setup()
 
 local server_opts = {
