@@ -22,7 +22,7 @@ repos:
       - id: stylua
         name: Format Lua Files
         language: system
-        entry: stylua --glob **/*.lua --
+        entry: stylua --glob **/*.lua --config-path ./private_dot_config/nvim/stylua.toml --
         types: [lua]
   - repo: https://github.com/sirosen/check-jsonschema
     rev: 0.4.1

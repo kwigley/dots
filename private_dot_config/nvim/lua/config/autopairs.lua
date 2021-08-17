@@ -1,11 +1,11 @@
 local npairs = require("nvim-autopairs")
 
 npairs.setup({
-	disable_filetype = { "TelescopePrompt", "vim", "spectre_panel" },
-	check_ts = true,
+  disable_filetype = { "TelescopePrompt", "vim", "spectre_panel" },
+  check_ts = true,
 })
 
 require("nvim-autopairs.completion.compe").setup({
-	map_cr = true, --  map <CR> on insert mode
-	map_complete = true, -- it will auto insert `(` after select function or method item
+  map_cr = true, --  map <CR> on insert mode
+  map_complete = true, -- it will auto insert `(` after select function or method item
 })

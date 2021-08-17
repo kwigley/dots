@@ -60,16 +60,16 @@ vim.g.loaded_matchit = 1
 vim.g.loaded_matchparen = 1
 -- Use proper syntax highlighting in code blocks
 local fences = {
-	"lua",
-	"json",
-	"typescript",
-	"javascript",
-	"js=javascript",
-	"ts=typescript",
-	"shell=sh",
-	"python",
-	"sh",
-	"console=sh",
+  "lua",
+  "json",
+  "typescript",
+  "javascript",
+  "js=javascript",
+  "ts=typescript",
+  "shell=sh",
+  "python",
+  "sh",
+  "console=sh",
 }
 vim.g.markdown_fenced_languages = fences
 
@@ -106,5 +106,7 @@ cmd([[autocmd BufRead,BufNewFile *.fish setfiletype fish]])
 cmd([[autocmd BufRead,BufNewFile *.nix setfiletype nix]])
 
 -- windows to close with "q"
-vim.cmd([[autocmd FileType help,startuptime,qf,lspinfo,spectre_panel nnoremap <buffer><silent> q :close<CR>]])
+vim.cmd(
+  [[autocmd FileType help,startuptime,qf,lspinfo,spectre_panel nnoremap <buffer><silent> q :close<CR>]]
+)
 vim.cmd([[autocmd FileType man nnoremap <buffer><silent> q :quit<CR>]])
