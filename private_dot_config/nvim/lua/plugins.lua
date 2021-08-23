@@ -37,6 +37,7 @@ local function plugins(use)
     end,
     requires = {
       "simrat39/rust-tools.nvim",
+      "mattn/webapi-vim",
       "mfussenegger/nvim-dap",
       "jose-elias-alvarez/nvim-lsp-ts-utils",
       "jose-elias-alvarez/null-ls.nvim",

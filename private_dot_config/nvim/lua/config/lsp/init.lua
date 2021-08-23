@@ -46,7 +46,6 @@ if vim.lsp.setup then
     },
   })
 else
-  -- require("config.lsp.saga")
   require("config.lsp.diagnostics")
   require("config.lsp.kind").setup()
 end

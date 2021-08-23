@@ -3,6 +3,7 @@ local npairs = require("nvim-autopairs")
 npairs.setup({
   disable_filetype = { "TelescopePrompt", "vim", "spectre_panel" },
   check_ts = true,
+  fast_wrap = {},
 })
 
 require("nvim-autopairs.completion.compe").setup({
