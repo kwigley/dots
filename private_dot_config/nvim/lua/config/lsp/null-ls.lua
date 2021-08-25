@@ -16,6 +16,7 @@ function M.setup()
       nls.builtins.diagnostics.shellcheck,
       nls.builtins.diagnostics.selene,
       nls.builtins.diagnostics.flake8,
+      nls.builtins.diagnostics.misspell,
     },
   })
 end
