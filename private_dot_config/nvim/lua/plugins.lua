@@ -14,7 +14,6 @@ local config = {
   -- this is NOT packer functionality!
   -- local_plugins = {
   --   kwigley = true,
-  --   ["nvim-compe"] = false,
   --   ["null-ls.nvim"] = true,
   -- },
 }
@@ -42,18 +41,27 @@ local function plugins(use)
       "jose-elias-alvarez/nvim-lsp-ts-utils",
       "jose-elias-alvarez/null-ls.nvim",
       "folke/lua-dev.nvim",
+      "hrsh7th/cmp-nvim-lsp",
     },
   })
 
   use({
-    "hrsh7th/nvim-compe",
+    "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     opt = true,
     config = function()
-      require("config.compe")
+      require("config.cmp")
     end,
-    wants = { "LuaSnip" },
+    wants = { "LuaSnip", "nvim-autopairs" },
     requires = {
+      "f3fora/cmp-spell",
+      "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
       {
         "L3MON4D3/LuaSnip",
         wants = "friendly-snippets",
@@ -89,13 +97,12 @@ local function plugins(use)
 
   use({
     "nvim-treesitter/nvim-treesitter",
-    branch = "0.5-compat",
     run = ":TSUpdate",
     opt = true,
     event = "BufRead",
     requires = {
       { "nvim-treesitter/playground", cmd = "TSHighlightCapturesUnderCursor" },
-      { "nvim-treesitter/nvim-treesitter-textobjects", branch = "0.5-compat" },
+      { "nvim-treesitter/nvim-treesitter-textobjects" },
       "RRethy/nvim-treesitter-textsubjects",
     },
     config = function()
