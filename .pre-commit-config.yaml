@@ -1,5 +1,3 @@
-# See https://pre-commit.com for more information
-# See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
@@ -7,7 +5,6 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
-      - id: check-toml
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.3.2
     hooks:
@@ -17,14 +14,3 @@ repos:
     hooks:
       - id: fish_syntax
       - id: fish_indent
-  - repo: local
-    hooks:
-      - id: stylua
-        name: Format Lua Files
-        language: system
-        entry: stylua --glob **/*.lua --config-path ./private_dot_config/nvim/stylua.toml --
-        types: [lua]
-  - repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.4.1
-    hooks:
-      - id: check-github-workflows

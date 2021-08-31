@@ -1,4 +1,2 @@
 .DS_Store
 Brewfile.lock.json
-private_dot_config/nvim/plugin/
-private_dot_config/nvim/sessions/
