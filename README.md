@@ -10,7 +10,7 @@ My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
 ### Included Tools & Apps
 
-- [neovim](https://neovim.io/) - text editor
+- [neovim](https://neovim.io/) - text editor ([neovim config](https://github.com/kwigley/nvim-dots))
 - [kitty](https://sw.kovidgoyal.net/kitty/) - GPU based terminal emulator
 - [fish](https://fishshell.com/) - user-friendly command line
   shell
