@@ -1,0 +1,2 @@
+syntax on " Turn on color syntax and allow custom Git commit message messages
+autocmd Filetype gitcommit setlocal spell textwidth=72 " Spell check git commit messages and wrap text at column 72
