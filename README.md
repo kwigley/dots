@@ -1,6 +1,6 @@
-# dots
-
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/kwigley/dots/main.svg)](https://results.pre-commit.ci/latest/github/kwigley/dots/main)
+
+# dots
 
 My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
