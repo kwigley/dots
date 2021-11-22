@@ -21,4 +21,6 @@ function update --description 'Update installed software'
     echo "updating node deps"
     cat ~/.default-npm-packages | xargs npm i -g
     npm update -g
+    echo "updating asdf"
+    asdf plugin-update --all
 end
