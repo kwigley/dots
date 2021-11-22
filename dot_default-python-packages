@@ -3,3 +3,4 @@ flake8
 black
 pipx
 pre-commit
+neovim
