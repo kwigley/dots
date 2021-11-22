@@ -1,3 +1,13 @@
-vscode-json-languageserver
+@tailwindcss/language-server
+bash-language-server
+dockerfile-language-server-nodejs
+neovim
+prettier
 prettier_d_slim
 pyright
+svelte-language-server
+typescript
+typescript-language-server
+vim-language-server
+vscode-langservers-extracted
+yaml-language-server
