@@ -4,6 +4,7 @@ dockerfile-language-server-nodejs
 neovim
 prettier
 prettier_d_slim
+eslint_d
 pyright
 svelte-language-server
 typescript
