@@ -2,7 +2,7 @@ function update --description 'Update installed software'
     echo "update macos"
     softwareupdate -i -a
     echo "updating homebrew installed software"
-    chezmoi execute-template <(chezmoi source-path)/run_once_before_install-packages-darwin.sh.tmpl | sh
+    chezmoi update
     brew upgrade
     echo "updating fisher plugins"
     fisher update
