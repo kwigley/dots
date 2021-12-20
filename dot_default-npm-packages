@@ -3,6 +3,7 @@ bash-language-server
 dockerfile-language-server-nodejs
 neovim
 prettier
+@fsouza/prettierd
 prettier_d_slim
 eslint_d
 pyright
