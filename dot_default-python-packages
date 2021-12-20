@@ -1,2 +1,4 @@
 pipx
 neovim
+ipython
+ipdb
