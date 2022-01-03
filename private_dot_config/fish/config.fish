@@ -32,6 +32,9 @@ set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
 end
+if test -f $HOME/.config/fish/vars.fish
+    source $HOME/.config/fish/vars.fish
+end
 
 # TokyoNight Color Palette
 set -l foreground c0caf5
