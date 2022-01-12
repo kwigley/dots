@@ -1,4 +1,4 @@
-pipx
-neovim
-ipython
 ipdb
+ipython
+neovim
+pipx
