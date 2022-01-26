@@ -7,6 +7,7 @@ function update --description 'Update installed software'
     echo "updating fisher plugins"
     fisher update
     echo "updating rust deps"
+    rustup update
     cargo install stylua
     echo "updating go deps"
     go install golang.org/x/tools/gopls@latest
