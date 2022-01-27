@@ -6,6 +6,7 @@ eslint_d
 neovim
 pnpm
 prettier
+prettier-plugin-toml
 prettier_d_slim
 pyright
 svelte-language-server
