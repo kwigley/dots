@@ -1,4 +1,4 @@
-function update --description 'Update installed software'
+function updatr --description 'Update installed software'
     chezmoi update
     echo "update macos"
     softwareupdate -i -a
@@ -7,10 +7,12 @@ function update --description 'Update installed software'
     brew upgrade
     echo "updating fisher plugins"
     fisher update
-    echo "updating rust deps"
-    rustup update
     echo "updating asdf"
     asdf plugin-update --all
+    echo "updating rust deps"
+    rustup update
+    echo "updating go deps"
+    cat ~/.default-golang-pkgs | xargs go install
     echo "updating python deps"
     pip install -U -r ~/.default-python-packages
     pipx ensurepath

@@ -1,5 +1,9 @@
-python 3.9.7 3.8.12 3.7.12
-nodejs lts-gallium lts-fermium lts-erbium
-ruby 3.0.0
+deno latest
+golang latest
 lua 5.4.2
+nodejs lts-gallium lts-fermium lts-erbium
 perl 5.32.1
+python 3.9.7 3.8.12 3.7.12
+ruby 3.0.0
+rust latest
+terraform latest
