@@ -6,7 +6,15 @@ function update --description 'Update installed software'
     brew update
     brew upgrade
     echo "updating fisher plugins"
-    fisher install
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+    fisher install PatrickF1/fzf.fish
+    fisher install gazorby/fish-abbreviation-tips
+    fisher install gazorby/fish-exa
+    fisher install jethrokuan/z
+    fisher install jhillyerd/plugin-git
+    fisher install lilyball/nix-env.fish
+    fisher install oakninja/MakeMeFish
+    fisher install pure-fish/pure
     fisher update
     echo "updating asdf"
     asdf plugin add nodejs
