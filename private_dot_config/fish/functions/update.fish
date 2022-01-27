@@ -9,21 +9,13 @@ function update --description 'Update installed software'
     fisher install
     fisher update
     echo "updating asdf"
-    asdf plugin add deno
-    asdf plugin add golang
-    asdf plugin add lua
     asdf plugin add nodejs
-    asdf plugin add perl
     asdf plugin add python
     asdf plugin add ruby
-    asdf plugin add rust
-    asdf plugin add terraform
     asdf plugin-update --all
     asdf install
     echo "updating rust deps"
     rustup update
-    echo "updating go deps"
-    cat ~/.default-golang-pkgs | xargs go install
     echo "updating python deps"
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
