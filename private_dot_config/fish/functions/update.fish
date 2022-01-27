@@ -9,6 +9,7 @@ function updatr --description 'Update installed software'
     fisher update
     echo "updating asdf"
     asdf plugin-update --all
+    asdf install
     echo "updating rust deps"
     rustup update
     echo "updating go deps"
