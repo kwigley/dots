@@ -6,8 +6,18 @@ function update --description 'Update installed software'
     brew update
     brew upgrade
     echo "updating fisher plugins"
+    fisher install
     fisher update
     echo "updating asdf"
+    asdf plugin add deno
+    asdf plugin add golang
+    asdf plugin add lua
+    asdf plugin add nodejs
+    asdf plugin add perl
+    asdf plugin add python
+    asdf plugin add ruby
+    asdf plugin add rust
+    asdf plugin add terraform
     asdf plugin-update --all
     asdf install
     echo "updating rust deps"
