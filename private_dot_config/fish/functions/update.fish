@@ -23,7 +23,8 @@ function update --description 'Update installed software'
     asdf plugin-update --all
     asdf install
     echo "updating rust deps"
-    rustup update
+    rustup-init -y
+    cargo install taplo-lsp
     echo "updating python deps"
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
