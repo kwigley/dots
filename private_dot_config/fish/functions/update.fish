@@ -1,4 +1,4 @@
-function updatr --description 'Update installed software'
+function update --description 'Update installed software'
     chezmoi update
     echo "update macos"
     softwareupdate -i -a
