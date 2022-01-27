@@ -25,7 +25,7 @@ function update --description 'Update installed software'
     echo "updating rust deps"
     rustup-init -y
     rustup update
-    cargo install taplo-lsp
+    cargo install --locked taplo-lsp
     echo "updating python deps"
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
