@@ -10,3 +10,4 @@ pager:
 aliases:
   co: pr checkout
   open: repo view --web
+  p: pr view --web
