@@ -29,8 +29,8 @@ set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
 end
-if test -f $HOME/.config/fish/vars.fish
-    source $HOME/.config/fish/vars.fish
+if test -f $HOME/.config/fish/local.fish
+    source $HOME/.config/fish/local.fish
 end
 
 # TokyoNight Color Palette
