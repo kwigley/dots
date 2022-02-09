@@ -10,6 +10,7 @@ prettier-plugin-toml
 prettier_d_slim
 pyright
 svelte-language-server
+tree-sitter-cli
 typescript
 typescript-language-server
 vim-language-server
