@@ -11,6 +11,7 @@ abbr --add senv 'source env/bin/activate.fish'
 abbr --add d deactivate
 abbr --add vim nvim
 abbr --add n nvim
+abbr --add k kubectl
 abbr --add e $EDITOR
 abbr --add src 'source ~/.config/fish/config.fish'
 abbr --add ch chezmoi
