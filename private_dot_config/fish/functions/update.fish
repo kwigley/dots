@@ -27,6 +27,7 @@ function update --description 'Update installed software'
     rustup update
     cargo install --locked taplo-lsp --vers 0.2.5
     echo "updating python deps"
+    pip install -U pip
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
     pipx install pre-commit
@@ -35,6 +36,7 @@ function update --description 'Update installed software'
     pipx install black
     pipx upgrade-all
     echo "updating node deps"
+    npm i -g npm
     cat ~/.default-npm-packages | xargs npm i -g
     npm update -g
 end
