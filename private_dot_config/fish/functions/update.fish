@@ -12,6 +12,7 @@ function update --description 'Update installed software'
     fisher install gazorby/fish-exa
     fisher install jethrokuan/z
     fisher install jhillyerd/plugin-git
+    fisher install jorgebucaran/autopair.fish
     fisher install lilyball/nix-env.fish
     fisher install oakninja/MakeMeFish
     fisher install pure-fish/pure
@@ -25,7 +26,6 @@ function update --description 'Update installed software'
     echo "updating rust deps"
     rustup-init -y
     rustup update
-    rustup component add rustfmt clippy --toolchain nightly
     cargo install --locked taplo-lsp --vers 0.2.5
     echo "updating python deps"
     pip install -U pip
