@@ -23,6 +23,9 @@ function update --description 'Update installed software'
     asdf plugin add ruby
     asdf plugin-update --all
     asdf install
+    echo "update go deps"
+    go install github.com/haya14busa/gopkgs/cmd/gopkgs@latest
+    go install github.com/ramya-rao-a/go-outline@latest
     echo "updating rust deps"
     rustup-init -y
     rustup update
