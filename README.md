@@ -4,11 +4,11 @@
 
 My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
-### Install
+## Install
 
 `sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply kwigley/dots`
 
-### Included Tools & Apps
+## Included Tools & Apps
 
 - [neovim](https://neovim.io/) - text editor ([👉 neovim config](https://github.com/kwigley/nvim-dots))
 - [kitty](https://sw.kovidgoyal.net/kitty/) - GPU based terminal emulator
@@ -26,6 +26,6 @@ My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 
 see more in the [homebrew bundle](run_once_before_install-packages-darwin.sh.tmpl)
 
-### Helpful Resources
+## Helpful Resources
 
 - [Setting up GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
