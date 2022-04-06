@@ -29,3 +29,4 @@ see more in the [homebrew bundle](run_once_before_install-packages-darwin.sh.tmp
 ## Helpful Resources
 
 - [Setting up GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+- [MonoLisa font](https://www.monolisa.dev/)
