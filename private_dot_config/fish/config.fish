@@ -34,7 +34,7 @@ if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
 if test -f $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.fish
-    $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.fish
+    source $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.fish
 end
 
 # TokyoNight Color Palette
