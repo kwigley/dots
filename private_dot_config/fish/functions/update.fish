@@ -21,6 +21,7 @@ function update --description 'Update installed software'
     asdf plugin add nodejs
     asdf plugin add python
     asdf plugin add ruby
+    asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
     asdf plugin-update --all
     asdf install
     echo "update go deps"

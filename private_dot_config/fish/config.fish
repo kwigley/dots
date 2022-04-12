@@ -33,6 +33,9 @@ end
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
+if test -f $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.fish
+    $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.fish
+end
 
 # TokyoNight Color Palette
 set -l foreground c0caf5
