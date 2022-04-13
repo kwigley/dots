@@ -38,6 +38,7 @@ function update --description 'Update installed software'
     pipx install pre-commit
     pipx install tox
     pipx install flake8
+    pipx install sqlfluff
     pipx install black
     pipx upgrade-all
     echo "updating node deps"
