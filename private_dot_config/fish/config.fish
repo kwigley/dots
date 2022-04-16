@@ -9,6 +9,7 @@ set -gx GOPATH $HOME/go
 # Abbr/Aliases
 abbr --add senv 'source env/bin/activate.fish'
 abbr --add d deactivate
+abbr --add cat bat
 abbr --add vim nvim
 abbr --add n nvim
 abbr --add k kubectl
