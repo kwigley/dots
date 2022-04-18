@@ -24,6 +24,7 @@ function update --description 'Update installed software'
     asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
     asdf plugin-update --all
     CC=GCC asdf install
+    asdf reshim
     echo "update go deps"
     go install github.com/haya14busa/gopkgs/cmd/gopkgs@latest
     go install github.com/ramya-rao-a/go-outline@latest
