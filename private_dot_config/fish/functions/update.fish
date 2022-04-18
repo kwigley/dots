@@ -28,6 +28,7 @@ function update --description 'Update installed software'
     echo "update go deps"
     go install github.com/haya14busa/gopkgs/cmd/gopkgs@latest
     go install github.com/ramya-rao-a/go-outline@latest
+    go install github.com/go-delve/delve/cmd/dlv@latest
     echo "updating rust deps"
     rustup-init -y
     rustup update
