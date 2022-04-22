@@ -38,11 +38,12 @@ function update --description 'Update installed software'
     pip install -U pip
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
-    pipx install pre-commit
-    pipx install tox
-    pipx install flake8
-    pipx install sqlfluff
     pipx install black
+    pipx install flake8
+    pipx install pre-commit
+    pipx install shandy-sqlfmt
+    pipx install sqlfluff
+    pipx install tox
     pipx upgrade-all
     echo "updating node deps"
     npm i -g npm
