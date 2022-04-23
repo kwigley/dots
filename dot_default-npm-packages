@@ -4,6 +4,7 @@ bash-language-server
 dockerfile-language-server-nodejs
 eslint_d
 neovim
+nx
 pnpm
 prettier
 prettier-plugin-toml
