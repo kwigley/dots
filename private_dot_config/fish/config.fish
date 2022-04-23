@@ -7,19 +7,20 @@ set -gx ASDF_DATA_DIR ~/.asdf
 set -gx GOPATH $HOME/go
 
 # Abbr/Aliases
-abbr --add senv 'source env/bin/activate.fish'
-abbr --add d deactivate
-abbr --add cat bat
-abbr --add vim nvim
-abbr --add n nvim
-abbr --add k kubectl
-abbr --add e $EDITOR
-abbr --add src 'source ~/.config/fish/config.fish'
-abbr --add ch chezmoi
-abbr --add rd 'rm -r'
 abbr --add c z
+abbr --add cat bat
+abbr --add ch chezmoi
+abbr --add d deactivate
 abbr --add dots 'cd (chezmoi source-path)'
+abbr --add e $EDITOR
+abbr --add k kubectl
+abbr --add n nvim
 abbr --add nvim-dots 'cd ~/.config/nvim'
+abbr --add pnx 'pnpm nx --'
+abbr --add rd 'rm -r'
+abbr --add senv 'source env/bin/activate.fish'
+abbr --add src 'source ~/.config/fish/config.fish'
+abbr --add vim nvim
 
 # External Configs
 set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
