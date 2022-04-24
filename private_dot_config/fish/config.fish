@@ -16,7 +16,7 @@ abbr --add e $EDITOR
 abbr --add k kubectl
 abbr --add n nvim
 abbr --add nvim-dots 'cd ~/.config/nvim'
-abbr --add pnx 'pnpm nx --'
+abbr --add pnx 'pnpm nx'
 abbr --add rd 'rm -r'
 abbr --add senv 'source env/bin/activate.fish'
 abbr --add src 'source ~/.config/fish/config.fish'
