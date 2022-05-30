@@ -22,6 +22,7 @@ function update --description 'Update installed software'
     asdf plugin add python
     asdf plugin add ruby
     asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
+    asdf plugin-add zig https://github.com/asdf-community/asdf-zig.git
     asdf plugin-update --all
     CC=GCC asdf install
     asdf reshim
@@ -47,7 +48,7 @@ function update --description 'Update installed software'
     pipx install tox
     pipx upgrade-all
     echo "updating node deps"
-    npm i -g npm
-    cat ~/.default-npm-packages | xargs npm i -g
-    npm update -g
+    npm i --location=global npm
+    cat ~/.default-npm-packages | xargs npm i --location=global
+    npm update --location=global
 end
