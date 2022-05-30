@@ -1,5 +1,3 @@
-dotnet-core 6.0.201
 nodejs lts-gallium lts-fermium lts-erbium
 python 3.10.4 3.9.12 3.8.13 3.7.13
 ruby 3.0.0
-zig 0.9.1

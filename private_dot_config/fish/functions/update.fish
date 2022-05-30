@@ -21,8 +21,6 @@ function update --description 'Update installed software'
     asdf plugin add nodejs
     asdf plugin add python
     asdf plugin add ruby
-    asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
-    asdf plugin-add zig https://github.com/asdf-community/asdf-zig.git
     asdf plugin-update --all
     CC=GCC asdf install
     asdf reshim
