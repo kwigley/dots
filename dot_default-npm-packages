@@ -1,4 +1,5 @@
 @fsouza/prettierd
+@prisma/language-server
 @tailwindcss/language-server
 bash-language-server
 dockerfile-language-server-nodejs
