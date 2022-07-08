@@ -25,6 +25,7 @@ abbr --add vim nvim
 # External Configs
 set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
 set -g fish_user_paths /usr/local/sbin $fish_user_paths
+set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
 set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
