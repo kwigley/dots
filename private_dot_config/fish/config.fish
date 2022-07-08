@@ -3,7 +3,7 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx PYTHONBREAKPOINT ipdb.set_trace
 set -gx GPG_TTY (tty)
-set -gx ASDF_DATA_DIR ~/.asdf
+set -gx ASDF_DATA_DIR $HOME/.asdf
 set -gx GOPATH $HOME/go
 
 # Abbr/Aliases
@@ -15,23 +15,35 @@ abbr --add dots 'cd (chezmoi source-path)'
 abbr --add e $EDITOR
 abbr --add k kubectl
 abbr --add n nvim
-abbr --add nvim-dots 'cd ~/.config/nvim'
+abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add pnx 'pnpm nx'
 abbr --add rd 'rm -r'
 abbr --add senv 'source env/bin/activate.fish'
-abbr --add src 'source ~/.config/fish/config.fish'
+abbr --add src 'source $HOME/.config/fish/config.fish'
 abbr --add vim nvim
 
 # External Configs
-set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
-set -g fish_user_paths /usr/local/sbin $fish_user_paths
-set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
 set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
-set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
+
+if test -d /opt/homebrew/bin
+    set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
+end
+if test -d /usr/local/sbin
+    set -g fish_user_paths /usr/local/sbin $fish_user_paths
+end
+if test -d /opt/homebrew/opt/luajit-openresty/bin
+    set -g fish_user_paths /opt/homebrew/opt/luajit-openresty/bin $fish_user_paths
+end
+if test -d /usr/local/opt/luajit-openresty/bin
+    set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
+end
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
+end
+if test -f /opt/homebrew/opt/asdf/asdf.fish
+    source /opt/homebrew/opt/asdf/asdf.fish
 end
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
