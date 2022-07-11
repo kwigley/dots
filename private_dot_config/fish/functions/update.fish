@@ -46,7 +46,7 @@ function update --description 'Update installed software'
     pipx install tox
     pipx upgrade-all
     echo "updating node deps"
-    npm i --location=global npm
-    cat ~/.default-npm-packages | xargs npm i --location=global
+    npm i --location=global --upgrade npm
+    cat ~/.default-npm-packages | xargs npm i --location=global --upgrade
     npm update --location=global
 end
