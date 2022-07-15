@@ -10,6 +10,7 @@ function update --description 'Update installed software'
     fisher install PatrickF1/fzf.fish
     fisher install gazorby/fish-abbreviation-tips
     fisher install gazorby/fish-exa
+    fisher install halostatue/fish-direnv
     fisher install jethrokuan/z
     fisher install jhillyerd/plugin-git
     fisher install jorgebucaran/autopair.fish
