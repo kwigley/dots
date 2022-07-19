@@ -5,6 +5,7 @@ set -gx PYTHONBREAKPOINT ipdb.set_trace
 set -gx GPG_TTY (tty)
 set -gx ASDF_DATA_DIR $HOME/.asdf
 set -gx GOPATH $HOME/go
+set -gx PNPM_HOME $HOME/Library/pnpm
 
 # Abbr/Aliases
 abbr --add c z
@@ -26,6 +27,7 @@ abbr --add vim nvim
 set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
 set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
+set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
 
 if test -d /opt/homebrew/bin
     set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
@@ -48,6 +50,7 @@ end
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
+
 
 # TokyoNight Color Palette
 set -l foreground c0caf5
