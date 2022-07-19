@@ -45,6 +45,7 @@ function update --description 'Update installed software'
     pipx install shandy-sqlfmt
     pipx install sqlfluff
     pipx install tox
+    pipx install virtualfish
     pipx upgrade-all
     echo "updating node deps"
     npm i --location=global --upgrade npm
