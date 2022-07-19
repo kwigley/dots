@@ -1,6 +1,7 @@
 @fsouza/prettierd
 @prisma/language-server
 @tailwindcss/language-server
+all-the-package-names
 bash-language-server
 dockerfile-language-server-nodejs
 eslint_d
