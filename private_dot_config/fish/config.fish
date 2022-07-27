@@ -41,6 +41,12 @@ end
 if test -d /usr/local/opt/luajit-openresty/bin
     set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
 end
+if test -d /opt/homebrew/opt/llvm/bin
+    set -g fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
+end
+if test -d /usr/local/opt/llvm/bin
+    set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
+end
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
 end
