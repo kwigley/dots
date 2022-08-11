@@ -41,6 +41,7 @@ function update --description 'Update installed software'
     pipx ensurepath
     pipx install black
     pipx install flake8
+    pipx install reorder-python-imports
     pipx install pre-commit
     pipx install shandy-sqlfmt
     pipx install sqlfluff
