@@ -39,6 +39,7 @@ function update --description 'Update installed software'
     pip install -U pip
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
+    pipx install autopep8
     pipx install black
     pipx install flake8
     pipx install reorder-python-imports
