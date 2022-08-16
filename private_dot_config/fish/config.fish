@@ -22,6 +22,7 @@ abbr --add rd 'rm -r'
 abbr --add senv 'source env/bin/activate.fish'
 abbr --add src 'source $HOME/.config/fish/config.fish'
 abbr --add vim nvim
+abbr --add htop btop
 
 # External Configs
 set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
