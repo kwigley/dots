@@ -57,6 +57,15 @@ if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
 
+# Determine whether to use side-by-side mode for delta
+function delta_sidebyside --on-signal WINCH
+    if test "$COLUMNS" -ge 120; and ! contains side-by-side "$DELTA_FEATURES"
+        set --global --export --append DELTA_FEATURES side-by-side
+    else if test "$COLUMNS" -lt 120; and contains side-by-side "$DELTA_FEATURES"
+        set --erase DELTA_FEATURES[(contains --index side-by-side "$DELTA_FEATURES")]
+    end
+end
+delta_sidebyside
 
 # TokyoNight Color Palette
 set -l foreground c0caf5
