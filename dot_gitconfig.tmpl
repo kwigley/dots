@@ -36,14 +36,16 @@
 [interactive]
   diffFilter = delta --color-only
 [merge]
-	tool = nvimdiff
+	tool = bc
 [mergetool]
 	keepBackup = false
 [mergetool "nvimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [diff]
-  tool = nvimdiff
+	tool = bc
 [difftool "nvimdiff"]
   cmd = nvim -d $LOCAL $REMOTE
 [push]
 	autoSetupRemote = true
+[mergetool "bc"]
+	trustExitCode = true
