@@ -30,6 +30,9 @@ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
 
+if test -d /Applications/Postgres.app/Contents/Versions/latest/bin/
+    set -g fish_user_paths /Applications/Postgres.app/Contents/Versions/latest/bin/ $fish_user_paths
+end
 if test -d /opt/homebrew/bin
     set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
 end
