@@ -57,6 +57,7 @@ end
 if test -f /opt/homebrew/opt/libpq/bin
     set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
     set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
+    set -gx PKG_CONFIG_PATH /opt/homebrew/opt/libpq/lib/pkgconfig
     set -g fish_user_paths /opt/homebrew/opt/libpq/bin $fish_user_paths
 end
 if test -f /usr/local/opt/asdf/asdf.fish
