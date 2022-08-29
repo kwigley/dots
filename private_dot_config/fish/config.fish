@@ -33,6 +33,9 @@ set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
 if test -d /opt/homebrew/bin
     set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
 end
+if test -d /opt/homebrew/sbin
+    set -g fish_user_paths /opt/homebrew/sbin $fish_user_paths
+end
 if test -d /usr/local/sbin
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
 end
