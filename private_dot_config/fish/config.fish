@@ -54,6 +54,11 @@ end
 if test -d /usr/local/opt/llvm/bin
     set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
 end
+if test -f /opt/homebrew/opt/libpq/bin
+    set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
+    set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
+    set -g fish_user_paths /opt/homebrew/opt/libpq/bin $fish_user_paths
+end
 if test -f /usr/local/opt/asdf/asdf.fish
     source /usr/local/opt/asdf/asdf.fish
 end
