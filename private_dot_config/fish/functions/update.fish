@@ -8,6 +8,7 @@ function update --description 'Update installed software'
     echo "updating fisher plugins"
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
     fisher install PatrickF1/fzf.fish
+    fisher install franciscolourenco/done
     fisher install gazorby/fish-abbreviation-tips
     fisher install gazorby/fish-exa
     fisher install halostatue/fish-direnv
