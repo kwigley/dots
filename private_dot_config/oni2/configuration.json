@@ -1,7 +1,7 @@
 {
   "workbench.colorTheme": "GitHub Dark",
   "editor.detectIndentation": true,
-  "editor.fontFamily": "JetBrainsMono-Regular.ttf",
+  "editor.fontFamily": "MonoLisa",
   "editor.fontSize": 14,
   "editor.largeFileOptimizations": true,
   "editor.highlightActiveIndentGuide": true,
@@ -27,5 +27,6 @@
   "workbench.sideBar.visible": true,
   "workbench.statusBar.visible": true,
   "workbench.tree.indent": 2,
-  "vim.useSystemClipboard": ["yank"]
+  "vim.useSystemClipboard": ["yank"],
+  "vim.leader": "<space>"
 }
