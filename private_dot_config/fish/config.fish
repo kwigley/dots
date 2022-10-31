@@ -80,6 +80,9 @@ function delta_sidebyside --on-signal WINCH
 end
 delta_sidebyside
 
+# pyenv init
+status is-login; and pyenv init --path | source
+
 # TokyoNight Color Palette
 set -l foreground c0caf5
 set -l selection 364A82
@@ -113,6 +116,3 @@ set -g fish_pager_color_progress $comment
 set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
-
-# pyenv init
-status is-login; and pyenv init --path | source
