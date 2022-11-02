@@ -1,5 +1,5 @@
 # ENV vars
-set -gx EDITOR nvim
+set -gx EDITOR vim
 set -gx VISUAL nvim
 set -gx PYTHONBREAKPOINT ipdb.set_trace
 set -gx GPG_TTY (tty)
@@ -20,6 +20,7 @@ abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add pnx 'pnpm nx'
 abbr --add rd 'rm -r'
 abbr --add senv 'source env/bin/activate.fish'
+abbr --add sdotenv 'source .env/bin/activate.fish'
 abbr --add src 'source $HOME/.config/fish/config.fish'
 abbr --add vim nvim
 abbr --add htop btop
