@@ -6,6 +6,7 @@ set -gx GPG_TTY (tty)
 set -gx ASDF_DATA_DIR $HOME/.asdf
 set -gx GOPATH $HOME/go
 set -gx PNPM_HOME $HOME/Library/pnpm
+set -gx DOCKER_HOST unix://$HOME/.colima/default/docker.sock
 
 # Abbr/Aliases
 abbr --add c z
