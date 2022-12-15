@@ -8,7 +8,7 @@
   branch = auto
   ui = true
 [core]
-  editor = vim
+  editor = nvim
   pager = delta
   excludesfile = ~/.gitignore
 [help]
@@ -21,6 +21,7 @@
 [alias]
   recent = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  chekcout = checkout
 [commit]
   gpgsign = true
 [pull]
