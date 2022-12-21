@@ -17,7 +17,7 @@ function update --description 'Update installed software'
     fisher install jorgebucaran/autopair.fish
     fisher install lilyball/nix-env.fish
     fisher install oakninja/MakeMeFish
-    fisher install pure-fish/pure
+    fisher install IlanCosman/tide@v5
     fisher update
     echo "updating asdf"
     asdf plugin add nodejs
