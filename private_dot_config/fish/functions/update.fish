@@ -55,4 +55,5 @@ function update --description 'Update installed software'
     npm i --location=global --upgrade npm
     cat ~/.default-npm-packages | xargs npm i --location=global --upgrade
     npm update --location=global
+    cp ~/.local/share/nvim/lazy/vim-kitty-navigator/*.py ~/.config/kitty/
 end
