@@ -32,38 +32,23 @@ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
 
-if test -d /Applications/Postgres.app/Contents/Versions/latest/bin/
-    set -g fish_user_paths /Applications/Postgres.app/Contents/Versions/latest/bin/ $fish_user_paths
-end
 if test -d /opt/homebrew/bin
     set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
 end
 if test -d /opt/homebrew/sbin
     set -g fish_user_paths /opt/homebrew/sbin $fish_user_paths
 end
-if test -d /usr/local/sbin
-    set -g fish_user_paths /usr/local/sbin $fish_user_paths
-end
 if test -d /opt/homebrew/opt/luajit-openresty/bin
     set -g fish_user_paths /opt/homebrew/opt/luajit-openresty/bin $fish_user_paths
 end
-if test -d /usr/local/opt/luajit-openresty/bin
-    set -g fish_user_paths /usr/local/opt/luajit-openresty/bin $fish_user_paths
-end
 if test -d /opt/homebrew/opt/llvm/bin
     set -g fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
-end
-if test -d /usr/local/opt/llvm/bin
-    set -g fish_user_paths /usr/local/opt/llvm/bin $fish_user_paths
 end
 if test -f /opt/homebrew/opt/libpq/bin
     set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
     set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
     set -gx PKG_CONFIG_PATH /opt/homebrew/opt/libpq/lib/pkgconfig
     set -g fish_user_paths /opt/homebrew/opt/libpq/bin $fish_user_paths
-end
-if test -f /usr/local/opt/asdf/asdf.fish
-    source /usr/local/opt/asdf/asdf.fish
 end
 if test -f /opt/homebrew/opt/asdf/asdf.fish
     source /opt/homebrew/opt/asdf/asdf.fish
