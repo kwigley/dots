@@ -48,9 +48,7 @@ function update --description 'Update installed software'
     pipx install shandy-sqlfmt
     pipx install sqlfluff
     pipx install tox
-    pipx install virtualfish
     pipx upgrade-all
-    vf install auto_activation
     echo "updating node deps"
     npm i --location=global --upgrade npm
     cat ~/.default-npm-packages | xargs npm i --location=global --upgrade
