@@ -20,8 +20,6 @@ abbr --add n nvim
 abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add pnx 'pnpm nx'
 abbr --add rd 'rm -r'
-abbr --add senv 'source env/bin/activate.fish'
-abbr --add sdotenv 'source .env/bin/activate.fish'
 abbr --add src 'source $HOME/.config/fish/config.fish'
 abbr --add vim nvim
 abbr --add htop btop
@@ -32,25 +30,25 @@ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
 
-# homebrew things
+# Homebrew things
 if test -d (brew --prefix)/bin
     set -g fish_user_paths (brew --prefix)/bin $fish_user_paths
 end
 if test -d (brew --prefix)/sbin
     set -g fish_user_paths (brew --prefix)/sbin $fish_user_paths
 end
-if test -d (brew --prefix)/opt/luajit-openresty/bin
-    set -g fish_user_paths (brew --prefix)/opt/luajit-openresty/bin $fish_user_paths
-end
-if test -d (brew --prefix)/opt/llvm/bin
-    set -g fish_user_paths (brew --prefix)/opt/llvm/bin $fish_user_paths
-end
-if test -f (brew --prefix)/opt/libpq/bin
-    set -gx LDFLAGS -L/(brew --prefix)/opt/libpq/lib
-    set -gx CPPFLAGS -I/(brew --prefix)/opt/libpq/include
-    set -gx PKG_CONFIG_PATH (brew --prefix)/opt/libpq/lib/pkgconfig
-    set -g fish_user_paths (brew --prefix)/opt/libpq/bin $fish_user_paths
-end
+# if test -d (brew --prefix)/opt/luajit-openresty/bin
+#     set -g fish_user_paths (brew --prefix)/opt/luajit-openresty/bin $fish_user_paths
+# end
+# if test -d (brew --prefix)/opt/llvm/bin
+#     set -g fish_user_paths (brew --prefix)/opt/llvm/bin $fish_user_paths
+# end
+# if test -f (brew --prefix)/opt/libpq/bin
+#     set -gx LDFLAGS -L/(brew --prefix)/opt/libpq/lib
+#     set -gx CPPFLAGS -I/(brew --prefix)/opt/libpq/include
+#     set -gx PKG_CONFIG_PATH (brew --prefix)/opt/libpq/lib/pkgconfig
+#     set -g fish_user_paths (brew --prefix)/opt/libpq/bin $fish_user_paths
+# end
 if test -f (brew --prefix)/opt/asdf/asdf.fish
     source (brew --prefix)/opt/asdf/asdf.fish
 end
