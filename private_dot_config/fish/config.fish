@@ -32,33 +32,36 @@ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
 set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
 set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
 
-if test -d /opt/homebrew/bin
-    set -g fish_user_paths /opt/homebrew/bin $fish_user_paths
+# homebrew things
+if test -d (brew --prefix)/bin
+    set -g fish_user_paths (brew --prefix)/bin $fish_user_paths
 end
-if test -d /opt/homebrew/sbin
-    set -g fish_user_paths /opt/homebrew/sbin $fish_user_paths
+if test -d (brew --prefix)/sbin
+    set -g fish_user_paths (brew --prefix)/sbin $fish_user_paths
 end
-if test -d /opt/homebrew/opt/luajit-openresty/bin
-    set -g fish_user_paths /opt/homebrew/opt/luajit-openresty/bin $fish_user_paths
+if test -d (brew --prefix)/opt/luajit-openresty/bin
+    set -g fish_user_paths (brew --prefix)/opt/luajit-openresty/bin $fish_user_paths
 end
-if test -d /opt/homebrew/opt/llvm/bin
-    set -g fish_user_paths /opt/homebrew/opt/llvm/bin $fish_user_paths
+if test -d (brew --prefix)/opt/llvm/bin
+    set -g fish_user_paths (brew --prefix)/opt/llvm/bin $fish_user_paths
 end
-if test -f /opt/homebrew/opt/libpq/bin
-    set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
-    set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
-    set -gx PKG_CONFIG_PATH /opt/homebrew/opt/libpq/lib/pkgconfig
-    set -g fish_user_paths /opt/homebrew/opt/libpq/bin $fish_user_paths
+if test -f (brew --prefix)/opt/libpq/bin
+    set -gx LDFLAGS -L/(brew --prefix)/opt/libpq/lib
+    set -gx CPPFLAGS -I/(brew --prefix)/opt/libpq/include
+    set -gx PKG_CONFIG_PATH (brew --prefix)/opt/libpq/lib/pkgconfig
+    set -g fish_user_paths (brew --prefix)/opt/libpq/bin $fish_user_paths
 end
-if test -f /opt/homebrew/opt/asdf/asdf.fish
-    source /opt/homebrew/opt/asdf/asdf.fish
+if test -f (brew --prefix)/opt/asdf/asdf.fish
+    source (brew --prefix)/opt/asdf/asdf.fish
 end
+
+# Source fish config not tracked by git
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
 
+# Thanks macOS
 if test (uname) = Darwin
-    # Thanks macOS
     ulimit -n 10240
 end
 
