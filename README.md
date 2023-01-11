@@ -24,7 +24,7 @@ My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 - [postico](https://eggerapps.at/postico/) - postgres client
 - [tokyonight](https://github.com/folke/tokyonight.nvim) - color theming
 
-see more in the [homebrew bundle](run_once_before_install-packages-darwin.sh.tmpl)
+See more in the [homebrew bundle](run_once_before_install-packages-darwin.sh.tmpl)
 
 ## Helpful Resources
 
