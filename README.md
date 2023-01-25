@@ -21,7 +21,6 @@ My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
 - [docker](https://www.docker.com/products/docker-desktop) - container management
 - [spotify](https://www.spotify.com/) - 🕺
 - [visual-studio-code](https://code.visualstudio.com/) - text editor and code browsing
-- [postico](https://eggerapps.at/postico/) - postgres client
 - [tokyonight](https://github.com/folke/tokyonight.nvim) - color theming
 
 See more in the [homebrew bundle](run_once_before_install-packages-darwin.sh.tmpl)

@@ -38,18 +38,6 @@ end
 if test -d (brew --prefix)/sbin
     set -g fish_user_paths (brew --prefix)/sbin $fish_user_paths
 end
-# if test -d (brew --prefix)/opt/luajit-openresty/bin
-#     set -g fish_user_paths (brew --prefix)/opt/luajit-openresty/bin $fish_user_paths
-# end
-# if test -d (brew --prefix)/opt/llvm/bin
-#     set -g fish_user_paths (brew --prefix)/opt/llvm/bin $fish_user_paths
-# end
-# if test -f (brew --prefix)/opt/libpq/bin
-#     set -gx LDFLAGS -L/(brew --prefix)/opt/libpq/lib
-#     set -gx CPPFLAGS -I/(brew --prefix)/opt/libpq/include
-#     set -gx PKG_CONFIG_PATH (brew --prefix)/opt/libpq/lib/pkgconfig
-#     set -g fish_user_paths (brew --prefix)/opt/libpq/bin $fish_user_paths
-# end
 if test -f (brew --prefix)/opt/asdf/asdf.fish
     source (brew --prefix)/opt/asdf/asdf.fish
 end
