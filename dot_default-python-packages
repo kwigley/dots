@@ -1,8 +1,4 @@
 pip
-autopep8
-flake8
 ipdb
 ipython
 neovim
-pipenv
-reorder-python-imports
