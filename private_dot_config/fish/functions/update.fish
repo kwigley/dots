@@ -26,28 +26,14 @@ function update --description 'Update installed software'
     asdf plugin-update --all
     CC=GCC asdf install
     asdf reshim
-    echo "update go deps"
-    go install golang.org/x/tools/gopls@latest
-    go install github.com/go-delve/delve/cmd/dlv@latest
-    go install github.com/haya14busa/gopkgs/cmd/gopkgs@latest
-    go install github.com/mitranim/gow@latest
-    go install github.com/ramya-rao-a/go-outline@latest
     echo "updating rust deps"
     rustup-init -y
     rustup update
-    cargo install taplo-cli --locked
     echo "updating python deps"
     pip install -U pip
     pip install -U -r ~/.default-python-packages
     pipx ensurepath
-    pipx install autopep8
-    pipx install black
-    pipx install flake8
-    pipx install reorder-python-imports
     pipx install pre-commit
-    pipx install shandy-sqlfmt
-    pipx install sqlfluff
-    pipx install tox
     pipx upgrade-all
     echo "updating node deps"
     npm i --location=global --upgrade npm
