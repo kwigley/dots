@@ -22,7 +22,6 @@ function update --description 'Update installed software'
     echo "updating asdf"
     asdf plugin add nodejs
     asdf plugin add python
-    asdf plugin add ruby
     asdf plugin-update --all
     CC=GCC asdf install
     asdf reshim
