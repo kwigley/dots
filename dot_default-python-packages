@@ -2,3 +2,4 @@ pip
 ipdb
 ipython
 neovim
+pre-commit

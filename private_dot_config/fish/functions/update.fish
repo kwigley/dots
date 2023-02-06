@@ -32,9 +32,6 @@ function update --description 'Update installed software'
     echo "updating python deps"
     pip install -U pip
     pip install -U -r ~/.default-python-packages
-    pipx ensurepath
-    pipx install pre-commit
-    pipx upgrade-all
     echo "updating node deps"
     npm i --location=global --upgrade npm
     cat ~/.default-npm-packages | xargs npm i --location=global --upgrade
