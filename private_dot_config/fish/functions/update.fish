@@ -30,8 +30,7 @@ function update --description 'Update installed software'
     rustup-init -y
     rustup update
     echo "updating python deps"
-    pip install -U pip
-    pip install -U -r ~/.default-python-packages
+    python=(asdf which python) $python -m pip install -U -r ~/.default-python-packages
     echo "updating node deps"
     npm i --location=global --upgrade npm
     cat ~/.default-npm-packages | xargs npm i --location=global --upgrade

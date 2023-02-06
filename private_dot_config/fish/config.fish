@@ -1,7 +1,6 @@
 # ENV vars
 set -gx EDITOR vim
 set -gx VISUAL nvim
-set -gx PYTHONBREAKPOINT ipdb.set_trace
 set -gx GPG_TTY (tty)
 set -gx ASDF_DATA_DIR $HOME/.asdf
 set -gx GOPATH $HOME/go
