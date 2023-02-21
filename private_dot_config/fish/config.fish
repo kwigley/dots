@@ -30,18 +30,6 @@ fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$PNPM_HOME"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-# Homebrew things
-if test -d (brew --prefix)/bin
-    fish_add_path --append (brew --prefix)/bin
-end
-if test -d (brew --prefix)/sbin
-    fish_add_path --append (brew --prefix)/sbin
-end
-if test -f (brew --prefix)/opt/asdf/asdf.fish
-    source (brew --prefix)/opt/asdf/asdf.fish
-end
-
 # Source fish config not tracked by git
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
