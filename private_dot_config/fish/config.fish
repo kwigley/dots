@@ -30,6 +30,7 @@ fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$PNPM_HOME"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # Homebrew things
 if test -d (brew --prefix)/bin
     fish_add_path --append (brew --prefix)/bin
