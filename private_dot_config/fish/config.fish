@@ -25,17 +25,17 @@ abbr --add htop btop
 abbr --add pip 'python -m pip'
 
 # External Configs
-set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths
-set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
-set -g fish_user_paths "$GOPATH/bin" $fish_user_paths
-set -g fish_user_paths "$PNPM_HOME" $fish_user_paths
+fish_add_path "$HOME/.local/bin"
+fish_add_path "$HOME/.cargo/bin"
+fish_add_path "$GOPATH/bin"
+fish_add_path "$PNPM_HOME"
 
 # Homebrew things
 if test -d (brew --prefix)/bin
-    set -g fish_user_paths (brew --prefix)/bin $fish_user_paths
+    fish_add_path --append (brew --prefix)/bin
 end
 if test -d (brew --prefix)/sbin
-    set -g fish_user_paths (brew --prefix)/sbin $fish_user_paths
+    fish_add_path --append (brew --prefix)/sbin
 end
 if test -f (brew --prefix)/opt/asdf/asdf.fish
     source (brew --prefix)/opt/asdf/asdf.fish
