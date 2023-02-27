@@ -19,22 +19,15 @@ function update --description 'Update installed software'
     fisher install oakninja/MakeMeFish
     fisher install kwigley/pure
     fisher update
-    echo "updating asdf"
-    asdf plugin add nodejs
-    asdf plugin add python
-    asdf plugin add terraform https://github.com/asdf-community/asdf-hashicorp.git
-    asdf plugin add aws-vault https://github.com/karancode/asdf-aws-vault.git
-    asdf plugin update --all
-    CC=GCC asdf install
-    asdf reshim
+    echo "updating rtx"
+    rtx plugin add nodejs
+    rtx plugin add python
+    rtx plugin add terraform https://github.com/asdf-community/asdf-hashicorp.git
+    rtx plugin add aws-vault https://github.com/karancode/asdf-aws-vault.git
+    rtx plugin update --all
+    rtx install
     echo "updating rust deps"
     rustup-init -y
     rustup update
-    echo "updating python deps"
-    python=(asdf which python) $python -m pip install -U -r ~/.default-python-packages
-    echo "updating node deps"
-    npm i --location=global --upgrade npm
-    cat ~/.default-npm-packages | xargs npm i --location=global --upgrade
-    npm update --location=global
     cp ~/.local/share/nvim/lazy/vim-kitty-navigator/*.py ~/.config/kitty/
 end

@@ -16,7 +16,7 @@ My config files for macOS managed by [`chezmoi`](https://www.chezmoi.io/)
   shell
 - [alacritty](https://github.com/alacritty/alacritty) - OpenGL terminal emulator
 - [homebrew](https://brew.sh/) - Package Manager for macOS
-- [asdf](https://asdf-vm.com/#/) - runtime version manager (for multiple versions of python, nodejs, lua, etc.)
+- [rtx](https://github.com/jdxcode/rtx) - runtime version manager (for multiple versions of python, nodejs, lua, etc.)
 - [amethyst](https://ianyh.com/amethyst/) - Automatic tiling window manager for macOS
 - [docker](https://www.docker.com/products/docker-desktop) - container management
 - [spotify](https://www.spotify.com/) - 🕺
