@@ -7,6 +7,7 @@ function update --description 'Update installed software'
     brew upgrade
     echo "updating fisher plugins"
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+    fisher install rstacruz/fish-asdf
     fisher install PatrickF1/fzf.fish
     fisher install franciscolourenco/done
     fisher install gazorby/fish-abbreviation-tips
@@ -19,13 +20,13 @@ function update --description 'Update installed software'
     fisher install oakninja/MakeMeFish
     fisher install kwigley/pure
     fisher update
-    echo "updating rtx"
-    rtx plugin add nodejs
-    rtx plugin add python
-    rtx plugin add terraform https://github.com/asdf-community/asdf-hashicorp.git
-    rtx plugin add aws-vault https://github.com/karancode/asdf-aws-vault.git
-    rtx plugin update --all
-    rtx install
+    echo "updating asdf"
+    asdf plugin add nodejs
+    asdf plugin add python
+    asdf plugin add terraform https://github.com/asdf-community/asdf-hashicorp.git
+    asdf plugin add aws-vault https://github.com/karancode/asdf-aws-vault.git
+    asdf plugin update --all
+    asdf install
     echo "updating rust deps"
     rustup-init -y
     rustup update
