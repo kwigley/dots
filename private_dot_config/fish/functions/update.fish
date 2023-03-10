@@ -1,7 +1,5 @@
 function update --description 'Update installed software'
     chezmoi update
-    echo "update macos"
-    softwareupdate -i -a
     echo "updating homebrew installed software"
     brew update
     brew upgrade
