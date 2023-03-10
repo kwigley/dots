@@ -23,8 +23,6 @@ function update --description 'Update installed software'
     echo "updating asdf"
     asdf plugin add nodejs
     asdf plugin add python
-    asdf plugin add terraform https://github.com/asdf-community/asdf-hashicorp.git
-    asdf plugin add aws-vault https://github.com/karancode/asdf-aws-vault.git
     asdf plugin update --all
     asdf install
     echo "updating rust deps"
