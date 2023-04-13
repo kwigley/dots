@@ -14,6 +14,7 @@ abbr --add d deactivate
 abbr --add dots 'cd (chezmoi source-path)'
 abbr --add e $EDITOR
 abbr --add k kubectl
+abbr --add fly flyctl
 abbr --add n nvim
 abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add pnx 'pnpm nx'
