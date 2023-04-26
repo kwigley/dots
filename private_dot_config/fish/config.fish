@@ -14,7 +14,6 @@ abbr --add d deactivate
 abbr --add dots 'cd (chezmoi source-path)'
 abbr --add e $EDITOR
 abbr --add k kubectl
-abbr --add fly flyctl
 abbr --add n nvim
 abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add pnx 'pnpm nx'
@@ -30,16 +29,19 @@ fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$PNPM_HOME"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Thanks macOS
+if test (uname) = Darwin
+    eval (/opt/homebrew/bin/brew shellenv)
+    ulimit -n 10240
+end
+
+if test (uname) = Linux
+    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+end
 
 # Source fish config not tracked by git
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
-end
-
-# Thanks macOS
-if test (uname) = Darwin
-    ulimit -n 10240
 end
 
 # Determine whether to use side-by-side mode for delta
