@@ -1,0 +1,29 @@
+# Don't let ripgrep vomit really long lines to my terminal, and show a preview.
+--max-columns=150
+--max-columns-preview
+
+# Limit search depth for directories.
+# --max-depth=8
+
+# Using glob patterns to include/exclude files or folders
+--glob=!git/*
+--glob=!.cache/*
+--glob=!dist/*
+--glob=!**/node_modules/*
+--glob=!.git/*
+--glob=!Library/*
+--glob=!Movies/*
+--glob=!build*
+--glob=!coverage/*
+--glob=!log/*
+--glob=!public/*
+--glob=!tmp/*
+--glob=!vendor/*
+
+# Set the colors.
+--colors=line:none
+--colors=line:style:bold
+
+# Searches case insensitively if the pattern is all lowercase.
+# Search case sensitively otherwise.
+--smart-case
