@@ -22,6 +22,8 @@
 --glob=!Applications/*
 --glob=!Music/*
 --glob=!Desktop/*
+--glob=!nltk_data/*
+--glob=!Pictures/*
 
 # Set the colors.
 --colors=line:none
