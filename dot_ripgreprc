@@ -11,14 +11,17 @@
 --glob=!dist/*
 --glob=!**/node_modules/*
 --glob=!.git/*
---glob=!Library/*
---glob=!Movies/*
 --glob=!build*
 --glob=!coverage/*
 --glob=!log/*
 --glob=!public/*
 --glob=!tmp/*
 --glob=!vendor/*
+--glob=!Library/*
+--glob=!Movies/*
+--glob=!Applications/*
+--glob=!Music/*
+--glob=!Desktop/*
 
 # Set the colors.
 --colors=line:none

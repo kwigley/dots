@@ -5,6 +5,7 @@ set -gx GPG_TTY (tty)
 set -gx GOPATH $HOME/go
 set -gx PNPM_HOME $HOME/Library/pnpm
 set -gx BAT_THEME base16
+set -gx RIPGREP_CONFIG_PATH $HOME/.ripgreprc
 
 # Abbr/Aliases
 abbr --add c z
