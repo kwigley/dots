@@ -29,6 +29,7 @@ fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$PNPM_HOME"
+fish_add_path "$HOME/.rye/shims"
 
 # Thanks macOS
 if test (uname) = Darwin
