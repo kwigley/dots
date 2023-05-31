@@ -45,6 +45,10 @@ if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
 
+
+# opam configuration
+source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
+
 # Determine whether to use side-by-side mode for delta
 function delta_sidebyside --on-signal WINCH
     if test "$COLUMNS" -ge 120; and ! contains side-by-side "$DELTA_FEATURES"
