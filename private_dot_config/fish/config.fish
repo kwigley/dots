@@ -19,7 +19,6 @@ abbr --add n nvim
 abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add pnx 'pnpm nx'
 abbr --add rd 'rm -r'
-abbr --add src 'source $HOME/.config/fish/config.fish'
 abbr --add vim nvim
 abbr --add htop btop
 abbr --add pip 'python -m pip'
@@ -92,3 +91,6 @@ set -g fish_pager_color_progress $comment
 set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
+
+# Created by `pipx` on 2023-06-27 17:18:01
+set PATH $PATH /Users/kwigley/.local/bin
