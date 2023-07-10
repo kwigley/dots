@@ -17,13 +17,5 @@ function update --description 'Update installed software'
     fisher install oakninja/MakeMeFish
     fisher install kwigley/pure
     fisher update
-    echo "updating asdf"
-    asdf plugin add nodejs
-    asdf plugin add python
-    asdf plugin update --all
-    asdf install
-    echo "updating rust deps"
-    rustup-init -y
-    rustup update
     cp ~/.local/share/nvim/lazy/vim-kitty-navigator/*.py ~/.config/kitty/
 end
