@@ -29,6 +29,10 @@ fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$PNPM_HOME"
 
+if test -d /opt/homebrew/opt/libpq/bin
+    fish_add_path /opt/homebrew/opt/libpq/bin
+end
+
 # Thanks macOS
 if test (uname) = Darwin
     eval (/opt/homebrew/bin/brew shellenv)
@@ -43,7 +47,6 @@ end
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
-
 
 # opam configuration
 source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
