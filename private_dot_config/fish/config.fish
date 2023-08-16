@@ -29,13 +29,6 @@ fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 fish_add_path "$PNPM_HOME"
 
-if test -d /opt/homebrew/opt/libpq/bin
-    fish_add_path /opt/homebrew/opt/libpq/bin
-    set -gx LDFLAGS -L/opt/homebrew/opt/libpq/lib
-    set -gx CPPFLAGS -I/opt/homebrew/opt/libpq/include
-    set -gx PKG_CONFIG_PATH /opt/homebrew/opt/libpq/lib/pkgconfig
-end
-
 # Thanks macOS
 if test (uname) = Darwin
     eval (/opt/homebrew/bin/brew shellenv)
