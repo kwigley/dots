@@ -2,15 +2,10 @@
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
-tap "dbt-labs/dbt"
 tap "go-task/tap"
-tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
-tap "omnisharp/omnisharp-roslyn"
 
 brew "act"
 brew "argocd"
@@ -82,8 +77,6 @@ cask "amethyst", args: { appdir: "/Applications" }
 cask "beyond-compare", args: { appdir: "/Applications" }
 cask "blender", args: { appdir: "/Applications" }
 cask "cleanshot", args: { appdir: "/Applications" }
-cask "cloudflare-warp", args: { appdir: "/Applications" }
-cask "cron", args: { appdir: "/Applications"}
 cask "discord", args: { appdir: "/Applications" }
 cask "dotnet-sdk", args: { appdir: "/Applications" }
 cask "figma", args: { appdir: "/Applications" }
@@ -99,7 +92,6 @@ cask "logi-options-plus", args: { appdir: "/Applications"}
 cask "loom", args: { appdir: "/Applications" }
 cask "postico", args: { appdir: "/Applications" }
 cask "raycast", args: { appdir: "/Applications" }
-cask "shortcat", args: { appdir: "/Applications" }
 cask "slack", args: { appdir: "/Applications" }
 cask "spotify", args: { appdir: "/Applications" }
 cask "twitch-studio", args: { appdir: "/Applications" }
