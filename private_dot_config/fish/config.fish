@@ -1,4 +1,4 @@
-# ENV vars
+#wyGkjj ENV vars
 set -gx EDITOR vim
 set -gx VISUAL nvim
 set -gx GPG_TTY (tty)
@@ -90,6 +90,3 @@ set -g fish_pager_color_progress $comment
 set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
-
-# Created by `pipx` on 2023-06-27 17:18:01
-set PATH $PATH /Users/kwigley/.local/bin
