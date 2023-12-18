@@ -11,3 +11,4 @@ aliases:
   co: pr checkout
   open: repo view --web
   p: pr view --web
+version: "1"
