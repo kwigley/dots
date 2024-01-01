@@ -22,6 +22,7 @@ abbr --add rd 'rm -r'
 abbr --add vim nvim
 abbr --add htop btop
 abbr --add pip 'python -m pip'
+abbr --add ssh 'kitten ssh'
 
 # External Configs
 fish_add_path "$HOME/.local/bin"
