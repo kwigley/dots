@@ -3,7 +3,6 @@ set -gx EDITOR vim
 set -gx VISUAL nvim
 set -gx GPG_TTY (tty)
 set -gx GOPATH $HOME/go
-set -gx PNPM_HOME $HOME/Library/pnpm
 set -gx BAT_THEME base16
 set -gx RIPGREP_CONFIG_PATH $HOME/.ripgreprc
 
@@ -28,7 +27,6 @@ abbr --add ssh 'kitten ssh'
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
-fish_add_path "$PNPM_HOME"
 
 # Thanks macOS
 if test (uname) = Darwin
@@ -43,6 +41,12 @@ end
 # Source fish config not tracked by git
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
+end
+
+# pnpm
+set -gx PNPM_HOME $HOME/Library/pnpm
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 
 # opam configuration
