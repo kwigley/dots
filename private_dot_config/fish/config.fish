@@ -28,16 +28,6 @@ fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
 
-# Thanks macOS
-if test (uname) = Darwin
-    eval (/opt/homebrew/bin/brew shellenv)
-    ulimit -n 10240
-end
-
-if test (uname) = Linux
-    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-end
-
 # Source fish config not tracked by git
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
