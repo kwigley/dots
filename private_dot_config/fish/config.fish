@@ -42,9 +42,6 @@ end
 # opam configuration
 source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 
-# pure prompt
-set --universal pure_enable_k8s true
-
 # Determine whether to use side-by-side mode for delta
 function delta_sidebyside --on-signal WINCH
     if test "$COLUMNS" -ge 120; and ! contains side-by-side "$DELTA_FEATURES"
