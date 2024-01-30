@@ -5,10 +5,10 @@ gazorby/fish-abbreviation-tips
 gazorby/fish-exa
 jethrokuan/z
 jhillyerd/plugin-git
-acomagu/fish-async-prompt
 jorgebucaran/autopair.fish
 lilyball/nix-env.fish
 oakninja/makemefish
 halostatue/fish-direnv
 franciscolourenco/done
 kwigley/pure
+acomagu/fish-async-prompt
