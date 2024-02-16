@@ -17,6 +17,6 @@ function update --description 'Update installed software'
     fisher install jorgebucaran/autopair.fish
     fisher install lilyball/nix-env.fish
     fisher install oakninja/MakeMeFish
-    fisher install kwigley/pure
+    fisher install pure-fish/pure
     fisher update
 end
