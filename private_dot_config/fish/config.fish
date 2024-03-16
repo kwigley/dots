@@ -55,6 +55,9 @@ function delta_sidebyside --on-signal WINCH
 end
 delta_sidebyside
 
+alias lightmode="kitty +kitten themes --reload-in=all Tokyo Night Day"
+alias darkmode="kitty +kitten themes --reload-in=all Tokyo Night Storm"
+
 # TokyoNight Color Palette
 set -l foreground c0caf5
 set -l selection 364A82
