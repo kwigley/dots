@@ -1,4 +1,4 @@
-#wyGkjj ENV vars
+# ENV vars
 set -gx EDITOR vim
 set -gx VISUAL nvim
 set -gx GPG_TTY (tty)
@@ -21,7 +21,10 @@ abbr --add rd 'rm -r'
 abbr --add vim nvim
 abbr --add htop btop
 abbr --add pip 'python -m pip'
+
+{{ if eq .chezmoi.os "darwin" -}}
 abbr --add ssh 'kitten ssh'
+{{ end -}}
 
 # External Configs
 fish_add_path "$HOME/.local/bin"

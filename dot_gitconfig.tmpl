@@ -1,7 +1,9 @@
 [user]
   name = {{ .name }}
   email = {{ .email }}
+{{ if eq .chezmoi.os "linux" -}}
   signingkey = {{ .gpg }}
+{{ end -}}
 [color]
   diff = auto
   status = auto
@@ -54,3 +56,7 @@
 [blame]
 	markIgnoredLines = true
 	markUnblamableLines = true
+{{ if eq .chezmoi.os "linux" -}}
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+{{ end -}}
