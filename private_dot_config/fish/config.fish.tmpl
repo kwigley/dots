@@ -30,7 +30,13 @@ abbr --add ssh 'kitten ssh'
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$GOPATH/bin"
+
+# dotnet
 fish_add_path "$HOME/dotnet"
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+fish_add_path "$BUN_INSTALL/bin"
 
 # Source fish config not tracked by git
 if test -f $HOME/.config/fish/local.fish
