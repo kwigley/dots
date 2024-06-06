@@ -19,7 +19,8 @@ abbr --add nvim-dots 'cd $HOME/.config/nvim'
 abbr --add rd 'rm -r'
 abbr --add vim nvim
 abbr --add htop btop
-abbr --add pip 'python -m pip'
+abbr --add pip 'python -m uv pip'
+abbr --add venv 'python -m uv venv'
 
 {{ if eq .chezmoi.os "darwin" -}}
 abbr --add ssh 'kitten ssh'
